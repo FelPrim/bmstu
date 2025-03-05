@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Readme.md",
+                "file": "Markdown/4 семестр/Физика/Лекции.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Readme"
+              "title": "Лекции"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Readme.md",
+                "file": "Markdown/4 семестр/Физика/Лекции.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Readme"
+              "title": "Обратные ссылки для Лекции"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Readme.md",
+                "file": "Markdown/4 семестр/Физика/Лекции.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из Readme"
+              "title": "Исходящие ссылки из Лекции"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Readme.md",
+                "file": "Markdown/4 семестр/Физика/Лекции.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Readme"
+              "title": "Структура Лекции"
             }
           }
         ]
@@ -172,6 +172,7 @@
   },
   "active": "f3f0ab2f6c8b20ca",
   "lastOpenFiles": [
+    "Readme.md",
     "Markdown/4 семестр/Физика/Семинары.md",
     "PDF/4 семестр/Физика/Семинары.pdf",
     "Markdown/4 семестр/Физика/Лекции.md",
@@ -207,7 +208,6 @@
     "PDF/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
     "PDF/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
     "PDF/4 семестр/Теоретическая механика/Семинары.md",
-    "PDF/4 семестр/Теоретическая механика/Лекции.md",
     "obsidian stuff/attachments/Pasted image 20250304152139.png",
     "obsidian stuff/attachments/Pasted image 20250304151638.png",
     "obsidian stuff/attachments/Pasted image 20250304150850.png",
