@@ -102,6 +102,7 @@
     {trigger: "cal", replacement: "\\mathcal{$0} $1", options: "mA"},
 
     {trigger: "tgg", replacement: "\\text{ tg } ", options: "mA"},
+	{trigger: "thh", replacement: "\\text{ th } ", options: "mA"},
     {trigger: "arctg", replacement: "\\text{ arctg } ", options: "mA"},
     {trigger: "shh", replacement: "\\text{ sh } ", options: "mA"},
     {trigger: "chh", replacement: "\\text{ ch } ", options: "mA"},
