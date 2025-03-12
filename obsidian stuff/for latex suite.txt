@@ -5,6 +5,9 @@
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
     {trigger: "bbeg", replacement: "\\begin{gather}\n$0\n\\end{gather}", options: "mA"},
     {trigger: "~~", replacement: "\\sim $0", options: "mA"},
+    {trigger: "\\(", replacement: "\\left( $0 \\right) $1", options: "mA"},
+    {trigger: "\\[", replacement: "\\left[ $0 \\right] $1", options: "mA"},
+    {trigger: "\\|", replacement: "\\lvert $0 \\rvert $1", options: "mA"},
     {trigger: "const", replacement: "\\text{const} $0", options: "mA"},
 
     // Dashes
