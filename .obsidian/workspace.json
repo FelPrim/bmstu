@@ -4,11 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "66a58338325c91c0",
+        "id": "87b70d874b0ad240",
         "type": "tabs",
         "children": [
           {
-            "id": "514d3dbd7324fdc9",
+            "id": "03a7378e60131e8f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Лекции"
+            }
+          },
+          {
+            "id": "3582c0990fce37cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Семинары"
+            }
+          },
+          {
+            "id": "a104494d836f59d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Домашнее задание"
+            }
+          },
+          {
+            "id": "391958459b61976d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "obsidian stuff/Untitled.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "8b5be7716a09ec37",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/уравнения математической физики/Семинары.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Семинары"
+            }
+          },
+          {
+            "id": "8d05c192d9c81cf9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -21,7 +91,8 @@
               "title": "Семинары"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -44,7 +115,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Файловый менеджер"
             }
           },
           {
@@ -78,7 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
     "id": "40b4c3f1c0f0a61e",
@@ -142,91 +213,80 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Markdown/4 семестр/Операционные системы/Семинары.md",
+                "file": "Markdown/4 семестр/Физика/Лекции.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Семинары"
-            }
-          },
-          {
-            "id": "d7e2e31d57c40b32",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "title": "Структура Лекции"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
       "github-sync:Sync with Remote": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "514d3dbd7324fdc9",
+  "active": "8d05c192d9c81cf9",
   "lastOpenFiles": [
-    "Markdown/4 семестр/Операционные системы/Лекции.md",
-    "Markdown/4 семестр/Операционные системы/Семинары.md",
-    "Untitled 2.md",
-    "Untitled 1.md",
-    "obsidian stuff/attachments/Pasted image 20250322105046.png",
-    "obsidian stuff/attachments/Pasted image 20250320062720.png",
-    "obsidian stuff/attachments/Pasted image 20250320060106.png",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
+    "Markdown/4 семестр/уравнения математической физики/Семинары.md",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
+    "obsidian stuff/Untitled.md",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
-    "Markdown/4 семестр/Физика/Лекции.md",
+    "Markdown/4 семестр/Операционные системы/Семинары.md",
+    "Markdown/4 семестр/Операционные системы/Лекции.md",
     "obsidian stuff/attachments/Pasted image 20250324175552.png",
     "obsidian stuff/attachments/Pasted image 20250324174338.png",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
-    "obsidian stuff/Untitled.md",
     "obsidian stuff/attachments/Pasted image 20250324152134.png",
-    "Markdown/4 семестр/ПТП.md",
-    "Markdown/4 семестр/Курсовая.md",
-    "Markdown/4 семестр/Физика/Семинары.md",
-    "PDF/4 семестр/Физика/Лекции.pdf",
-    "PDF/4 семестр/Физика/Семинары.pdf",
-    "Untitled.md",
-    "Markdown/4 семестр/Операционные системы/Занятие ОС 12032025.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
-    "PDF/4 семестр/Операционные системы/Занятие ОС 12032025.pdf",
-    "PDF/4 семестр/Курсовая.pdf",
-    "PDF/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.pdf",
     "obsidian stuff/attachments/Pasted image 20250314122417.png",
     "obsidian stuff/attachments/Pasted image 20250314114903.png",
     "obsidian stuff/attachments/Pasted image 20250314114553.png",
-    "obsidian stuff/attachments/Pasted image 20250312193654.png",
-    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
-    "Markdown/4 семестр/Теоретическая механика/Семинары.md",
-    "Markdown/4 семестр/уравнения математической физики/Семинары.md",
-    "Markdown/4 семестр/уравнения математической физики/ДЗ.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
+    "Untitled.md",
+    "Untitled 2.md",
+    "Untitled 1.md",
+    "Markdown/4 семестр/Операционные системы/Занятие ОС 12032025.md",
+    "Markdown/4 семестр/Курсовая.md",
+    "Markdown/4 семестр/ПТП.md",
+    "obsidian stuff/attachments/Pasted image 20250322105046.png",
+    "obsidian stuff/attachments/Pasted image 20250320062720.png",
+    "obsidian stuff/attachments/Pasted image 20250320060106.png",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
+    "PDF/4 семестр/ТФКП и операционное исчисление/Семинары.pdf",
     "Markdown/4 семестр/уравнения математической физики/Лекции.md",
-    "obsidian stuff/lu36853f89l.tmp",
+    "PDF/4 семестр/Операционные системы/Занятие ОС 12032025.pdf",
+    "PDF/4 семестр/Курсовая.pdf",
+    "Markdown/4 семестр/уравнения математической физики/ДЗ.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
+    "Markdown/4 семестр/Теоретическая механика/Семинары.md",
+    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
+    "Readme.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md",
+    "PDF/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.pdf",
+    "Markdown/4 семестр/Физика/Лекции.md",
     "Markdown/4 семестр/Английский/Просто записи.md",
+    "obsidian stuff/attachments/Pasted image 20250312193654.png",
     "obsidian stuff/for latex suite.txt",
     "obsidian stuff/новый 1.txt",
-    "Readme.md",
+    "PDF/4 семестр/Физика/Семинары.pdf",
+    "PDF/4 семестр/Физика/Лекции.pdf",
     "PDF/4 семестр/уравнения математической физики/Семинары.pdf",
-    "PDF/4 семестр/уравнения математической физики/Лекции.pdf",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md"
+    "PDF/4 семестр/уравнения математической физики/Лекции.pdf"
   ]
 }
