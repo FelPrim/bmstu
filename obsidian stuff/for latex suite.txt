@@ -43,12 +43,12 @@
 
     // Text environment
     {trigger: "txt", replacement: "\\text{ $0 }$1", options: "mA"},
-    {trigger: "grad", replacement: "\\text{ grad } $0", options: "mA"},
-    {trigger: "div", replacement: "\\text{ div } $0", options: "mA"},
+    {trigger: "grad", replacement: "\\operatorname{grad} $0", options: "mA"},
+    {trigger: "div", replacement: "\\operatorname{div} $0", options: "mA"},
     {trigger: "max", replacement: "\\max $0", options: "mA"},
     {trigger: "min", replacement: "\\min $0", options: "mA"},
     {trigger: "упр", replacement: "\\text{упр} $0", options: "mA"},
-    {trigger: "rot", replacement: "\\text{ rot } $0", options: "mA"},
+    {trigger: "rot", replacement: "\\operatorname{ rot } $0", options: "mA"},
     {trigger: "\"", replacement: "\\text{$0}$1", options: "mA"},
 
     // Basic operations
@@ -104,20 +104,19 @@
     {trigger: "inff", replacement: "\\inf ", options: "mA"},
     {trigger: "cal", replacement: "\\mathcal{$0} $1", options: "mA"},
 
-    {trigger: "tgg", replacement: "\\text{ tg } ", options: "mA"},
-	{trigger: "thh", replacement: "\\text{ th } ", options: "mA"},
-    {trigger: "arctg", replacement: "\\text{ arctg } ", options: "mA"},
-    {trigger: "shh", replacement: "\\text{ sh } ", options: "mA"},
-    {trigger: "chh", replacement: "\\text{ ch } ", options: "mA"},
-    {trigger: "cosh", replacement: "\\text{ cosh } ", options: "mA"},
-    {trigger: "coch", replacement: "\\text{ coch } ", options: "mA"},
-    {trigger: "arsh", replacement: "\\text{ arsh } ", options: "mA"},
-    {trigger: "arch", replacement: "\\text{ arch } ", options: "mA"},
-    {trigger: "arth", replacement: "\\text{ arth } ", options: "mA"},
-    {trigger: "arcth", replacement: "\\text{ arcth } ", options: "mA"},
-    {trigger: "Ln", replacement: "\\text{ Ln } ", options: "mA"},
-    {trigger: "arg", replacement: "\\arg ", options: "mA"},
-    {trigger: "Arg", replacement: "\\text{ Arg } ", options: "mA"},
+    {trigger: "tgg", replacement: "\\operatorname{ tg } ", options: "mA"},
+	{trigger: "thh", replacement: "\\operatorname{ th } ", options: "mA"},
+    {trigger: "arctg", replacement: "\\operatorname{ arctg } ", options: "mA"},
+    {trigger: "shh", replacement: "\\operatorname{ sh } ", options: "mA"},
+    {trigger: "chh", replacement: "\\operatorname{ ch } ", options: "mA"},
+    {trigger: "cosh", replacement: "\\operatorname{ cosh } ", options: "mA"},
+    {trigger: "coch", replacement: "\\operatorname{ coch } ", options: "mA"},
+    {trigger: "arsh", replacement: "\\operatorname{ arsh } ", options: "mA"},
+    {trigger: "arch", replacement: "\\operatorname{ arch } ", options: "mA"},
+    {trigger: "arth", replacement: "\\operatorname{ arth } ", options: "mA"},
+    {trigger: "arcth", replacement: "\\operatorname{ arcth } ", options: "mA"},
+    {trigger: "Ln", replacement: "\\operatorname{ Ln } ", options: "mA"},
+    {trigger: "Arg", replacement: "\\operatorname{ Arg } ", options: "mA"},
     
     // More auto letter subscript
     {trigger: /([A-Za-z])_(\d\d)/, replacement: "[[0]]_{[[1]]}", options: "rmA"},
@@ -159,7 +158,8 @@
 
 
     {trigger: "<->", replacement: "\\leftrightarrow ", options: "mA"},
-	{trigger: "->", replacement: "\\to", options: "mA"},
+
+	{trigger: "->", replacement: "\\to ", options: "mA"},
 	{trigger: "!>", replacement: "\\mapsto", options: "mA"},
     {trigger: "=>", replacement: "\\Rightarrow ", options: "mA"},
 	{trigger: "=<", replacement: "\\Leftarrow ", options: "mA"},
@@ -167,8 +167,8 @@
     {trigger: "\\leq =", replacement: "\\impliedby ", options: "mA", priority: 1},
     {trigger: "\\leq >", replacement: "\\Leftrightarrow ", options: "mA", priority: 1},
     
-	{trigger: "and", replacement: "\\cap", options: "mA"},
-	{trigger: "orr", replacement: "\\cup", options: "mA"},
+	{trigger: "and", replacement: "\\wedge ", options: "mA"},
+	{trigger: "orr", replacement: "\\vee ", options: "mA"},
 	{trigger: "inn", replacement: "\\in", options: "mA"},
 	{trigger: "notin", replacement: "\\not\\in", options: "mA"},
     {trigger: "\\\\\\", replacement: "\\setminus", options: "mA"},
