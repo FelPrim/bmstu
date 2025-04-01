@@ -4,67 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "0a4e097ad4916dff",
+        "id": "c0eb1b9945362f8a",
         "type": "tabs",
         "children": [
           {
-            "id": "1f42bfb1e7c6ffc9",
+            "id": "2fbed26c611a197d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/Физика/Семинары.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Семинары"
-            }
-          },
-          {
-            "id": "86e34555fbb2b2ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 3.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 3"
-            }
-          },
-          {
-            "id": "17af69424058c9dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 4"
-            }
-          },
-          {
-            "id": "95f7aad9c084b6b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/Физика/Лекции.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Лекции"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -213,12 +166,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "17af69424058c9dc",
+  "active": "2fbed26c611a197d",
   "lastOpenFiles": [
+    "Markdown/4 семестр/Физика/Лекции.md",
     "Untitled 4.md",
     "Untitled 3.md",
     "Markdown/4 семестр/Физика/Семинары.md",
-    "Markdown/4 семестр/Физика/Лекции.md",
     "obsidian stuff/attachments/Pasted image 20250328193510.png",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
     "Markdown/4 семестр/Операционные системы/код из гитлаба.md",
