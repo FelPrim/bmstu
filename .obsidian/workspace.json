@@ -34,14 +34,7 @@
               "icon": "lucide-file",
               "title": "Лекции"
             }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "a6865d401411f4b6",
-        "type": "tabs",
-        "children": [
+          },
           {
             "id": "a9a858297d17252a",
             "type": "leaf",
@@ -56,7 +49,8 @@
               "title": "ДЗ"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
