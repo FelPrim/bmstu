@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "66f451816790126a",
+        "id": "03fffb026f4eed9c",
         "type": "tabs",
         "children": [
           {
-            "id": "d575d87cc48482a6",
+            "id": "2d83aab610cb0ebd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Семинары"
+              "title": "New tab"
             }
           }
         ]
@@ -170,8 +166,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d575d87cc48482a6",
+  "active": "2d83aab610cb0ebd",
   "lastOpenFiles": [
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
     "obsidian stuff/attachments/Pasted image 20250403161802.png",
     "Markdown/4 семестр/уравнения математической физики/Лекции.md",
@@ -197,7 +194,6 @@
     "Untitled 3.md",
     "Markdown/4 семестр/Физика/Семинары.md",
     "obsidian stuff/attachments/Pasted image 20250328193510.png",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
     "obsidian stuff/attachments/Pasted image 20250327182307.png",
     "obsidian stuff/attachments/Pasted image 20250327162417.png",
     "obsidian stuff/Untitled.md",
