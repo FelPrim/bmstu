@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "66f451816790126a",
+        "id": "a6865d401411f4b6",
         "type": "tabs",
         "children": [
           {
-            "id": "d575d87cc48482a6",
+            "id": "a9a858297d17252a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,8 +170,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d575d87cc48482a6",
+  "active": "a9a858297d17252a",
   "lastOpenFiles": [
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
     "obsidian stuff/attachments/Pasted image 20250403161802.png",
@@ -201,7 +202,6 @@
     "obsidian stuff/attachments/Pasted image 20250327182307.png",
     "obsidian stuff/attachments/Pasted image 20250327162417.png",
     "obsidian stuff/Untitled.md",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
     "Markdown/4 семестр/Операционные системы/Лекции.md",
     "Untitled.md",
     "Untitled 2.md",
