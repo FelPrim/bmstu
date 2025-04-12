@@ -1,1 +1,1 @@
-$$\begin{gather} \begin{cases} u \end{cases} \end{gather}$$
+$$\begin{gather} \begin{cases} u_{xx}+2\sin x u_{xy}+\sin^2x u_{yy}+\cos xu_{y}=0 \end{cases} \end{gather}$$
