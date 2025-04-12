@@ -1,3 +1,6 @@
 {
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "showViewHeader": true,
+  "baseFontSize": 14,
+  "baseFontSizeAction": false
 }

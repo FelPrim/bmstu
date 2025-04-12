@@ -7,5 +7,6 @@
     "downscalePercent": 100
   },
   "useMarkdownLinks": false,
-  "vimMode": true
+  "vimMode": true,
+  "strictLineBreaks": false
 }
