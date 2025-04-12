@@ -1,0 +1,1 @@
+$$\begin{gather} \begin{cases} 1 \end{cases} \end{gather}$$
