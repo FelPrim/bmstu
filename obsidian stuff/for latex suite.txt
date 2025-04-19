@@ -6,6 +6,7 @@
     {trigger: "bbeg", replacement: "\\begin{gather}\n$0\n\\end{gather}", options: "mA"},
     {trigger: "~~", replacement: "\\sim $0", options: "mA"},
     {trigger: "\\(", replacement: "\\left( $0 \\right) $1", options: "mA"},
+    {trigger: "\\)", replacement: "\\right) $0", options: "mA"},
     {trigger: "\\[", replacement: "\\left[ $0 \\right] $1", options: "mA"},
     {trigger: "\\|", replacement: "\\lvert $0 \\rvert $1", options: "mA"},
     {trigger: "const", replacement: "\\text{const} $0", options: "mA"},
@@ -164,6 +165,9 @@
 
     {trigger: "<->", replacement: "\\leftrightarrow ", options: "mA"},
 
+	{trigger: "-->", replacement: "\\underset{ ${0:n} \\to ${1:\\infty} }{ ${2:\\to}} $3 ", options: "mA"},
+	{trigger: "us", replacement: "\\underset{ $1 }{ $0} $2 ", options: "mA"},
+	{trigger: "os", replacement: "\\overset{ $1 }{ $0} $2 ", options: "mA"},
 	{trigger: "->", replacement: "\\to ", options: "mA"},
 	{trigger: "!>", replacement: "\\mapsto", options: "mA"},
     {trigger: "=>", replacement: "\\Rightarrow ", options: "mA"},
