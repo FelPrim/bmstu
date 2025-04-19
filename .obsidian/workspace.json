@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9935b76534a223ac",
+        "id": "47cac3ae63fa18ad",
         "type": "tabs",
         "children": [
           {
-            "id": "a43d5ef0b6fa06f9",
+            "id": "b3fc5b19108433de",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown/4 семестр/Физика/Семинары.md",
+                "file": "Markdown/4 семестр/ПТП.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Семинары"
+              "title": "ПТП"
             }
           }
         ]
@@ -44,7 +44,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Файловый менеджер"
+              "title": "Files"
             }
           },
           {
@@ -61,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Поиск"
+              "title": "Search"
             }
           },
           {
@@ -160,63 +160,63 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Меню быстрого перехода": false,
-      "graph:Граф": false,
-      "canvas:Создать новый холст": false,
-      "daily-notes:Сегодняшняя заметка": false,
-      "templates:Вставить шаблон": false,
-      "command-palette:Открыть палитру команд": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "github-sync:Sync with Remote": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a43d5ef0b6fa06f9",
+  "active": "b3fc5b19108433de",
   "lastOpenFiles": [
-    "Markdown/4 семестр/ПТП.md",
-    "Markdown/4 семестр/Курсовая.md",
-    "Markdown/test.md",
-    "Markdown/Допы.md",
+    "PDF/4 семестр/уравнения математической физики/ДЗ.pdf",
+    "PDF/4 семестр/Физика/Домашнее задание 1.pdf",
+    "PDF/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.pdf",
+    "PDF/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.pdf",
+    "PDF/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.pdf",
     "PDF/4 семестр/ПТП.pdf",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
+    "Markdown/4 семестр/Операционные системы/Занятие ОС 12032025.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.md",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
+    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
+    "Markdown/4 семестр/уравнения математической физики/ДЗ.md",
+    "obsidian stuff/attachments/Pasted image 20250417122731.png",
+    "Untitled 2.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
+    "Untitled 1.md",
+    "Untitled.md",
     "Markdown/4 семестр/Физика/Семинары.md",
     "Markdown/4 семестр/Физика/Лекции.md",
-    "Markdown/4 семестр/Физика/Домашнее задание 1.md",
-    "PDF/4 семестр/Физика/Домашнее задание 1.pdf",
-    "Markdown/4 семестр/уравнения математической физики/Семинары.md",
-    "Markdown/4 семестр/уравнения математической физики/Лекции.md",
-    "Markdown/4 семестр/уравнения математической физики/ДЗ.md",
-    "PDF/4 семестр/уравнения математической физики/ДЗ.pdf",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
-    "PDF/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.pdf",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.md",
-    "PDF/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.pdf",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
-    "PDF/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.pdf",
-    "Markdown/4 семестр/Теоретическая механика/Семинары.md",
-    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
+    "Без названия.md",
+    "Без названия 1.md",
+    "result/Допы.md",
+    "result/test.md",
+    "result/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.md",
+    "obsidian stuff/attachments/Pasted image 20250407224722.png",
+    "Markdown/test.md",
+    "PDF/4 семестр/Физика/Семинары.pdf",
     "Markdown/4 семестр/Операционные системы/Семинары.md",
-    "Markdown/4 семестр/Операционные системы/Лекции.md",
     "Markdown/4 семестр/Операционные системы/код из гитлаба.md",
-    "Markdown/4 семестр/Операционные системы/Занятие ОС 12032025.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Код из 18 лабы.md",
-    "obsidian stuff/attachments/Pasted image 20250417122731.png",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
+    "Markdown/4 семестр/уравнения математической физики/Лекции.md",
     "obsidian stuff/attachments/Pasted image 20250410134115.png",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
+    "Markdown/4 семестр/Физика/Домашнее задание 1.md",
+    "Markdown/4 семестр/ПТП.md",
+    "result/4 семестр/уравнения математической физики",
+    "result/4 семестр/Физика",
+    "result/4 семестр/Теория вероятности и математическая статистика",
+    "result/4 семестр/Теоретическая механика",
     "obsidian stuff/attachments/Pasted image 20250408174218.png",
     "obsidian stuff/attachments/Pasted image 20250408161415.png",
     "obsidian stuff/attachments/Pasted image 20250408160707.png",
     "obsidian stuff/attachments/Pasted image 20250408143207.png",
     "obsidian stuff/attachments/Pasted image 20250408135355.png",
     "obsidian stuff/attachments/Pasted image 20250408134528.png",
-    "obsidian stuff/attachments/Pasted image 20250407224722.png",
-    "result/4 семестр/уравнения математической физики",
-    "result/4 семестр/ТФКП и операционное исчисление",
-    "result/4 семестр/Теория вероятности и математическая статистика",
-    "result/4 семестр/Теоретическая механика",
     "obsidian stuff/attachments/Pasted image 20250403161802.png"
   ]
 }
