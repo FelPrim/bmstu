@@ -1,0 +1,828 @@
+Теорвер и Матстат Севастьянова Бориса Николаевича (мат стат нет),
+13/02/2025
+Задача де Мере
+Сколько раз нужно подбросить пару игральных костей, чтобы с вероятностью хотя бы $\frac{1}{2}$  выпало 6+6?
+#### Колмогоровский подход
+$(\Omega,\mathcal{A},P)$
+$\Omega$ - множество элементарных исходов,
+$\mathcal{A}$ - система подмножеств $\Omega$, является $\sigma$-алгеброй.
+Элементы $\mathcal{A}$ - события.
+$\omega\in \Omega$ - элементарный исход.
+Если $\omega\in A$ - $\omega$ благоприятствует А
+$\varnothing$ - невозможное событие.
+$\Omega$ - достоверное событие
+$A\subset B$ - событие А влечёт событие B
+$A\backslash B$ - разность событий
+$A+B=A \cup B$ - сумма собыьтий
+$A\cdot B=A\cap B$
+
+$P$ - мера на $\mathcal{A}$, из аксиоматики колмогорова:
+1) $P(A)\geq 0$
+2) $P(\Omega)=1$
+3) $A\cap B=\varnothing \Rightarrow P(A+B)=P(A)+P(B)$ - A и B называются независимыми.
+Примеры:
+Классическая вероятностная модель:
+$$\begin{gather}
+\Omega\in X \ - \ \text{Конечное множество} \\
+\mathcal{A}=2^X \ - \ \text{система всех подмножеств}\\
+P(A\in \Omega)={\frac{|A|}{|\Omega|}}={\frac{\text{число благоприятных исходов}}{\text{Общее число исходов}}}
+\end{gather}$$
+Пример, поясняющий пример:
+$$\begin{gather}
+\Omega=\{ (i,j),\begin{matrix}
+i=\overline{1,6}\\ 
+j=\overline{1,6}
+\end{matrix} \}
+\end{gather}$$
+Задача де Мере
+n - подбрасываемая
+$$\begin{gather}
+\Omega=\{ (i_{1},j_{1}),(i_{2},j_{2}),\dots,(i_{36},j_{36}) \}\\
+|\Omega|=36^n \\
+A = \{ \text{Хотя бы 1 раз выпало 6+6} \} \\
+\overline{A} = \Omega\backslash A \ - \ \text{Противоположное событие} \\
+\Omega=\overline{A} + A \\
+\overline{A}=\{ \text{Ни разу не выпало 6+6} \}\\
+|\overline{A}|=35^n\\
+1=P(\Omega)=P(A)+P(\overline{A})\\
+P(\overline{A})=\left( \frac{35}{36} \right)^n\\
+\left( \frac{35}{36} \right)^n<{\frac{1}{2}} \\
+n \ln\left( \frac{35}{36} \right) < \ln\left( \frac{1}{2} \right) \\
+n>\frac{\ln\left( \frac{1}{2} \right)}{\ln\left( \frac{35}{36} \right)} \approx 24,\dots
+\end{gather}$$
+#### Вычисление вероятностей в класс схеме - комбинаторная задача
+Правила комбинаторики:
+1) Правило суммы.
+$$A\cap B=\varnothing\Rightarrow\#A\cup B=\#A+\#B$$
+2) Правило произведения.
+$$\#A\times B=\#A\cdot\#B$$
+3. Перестановки в множестве с мощностью n:
+$$P_{n}=n!$$
+Это число биекций множества в себя. Для каждого отображения "порядок" важен - именно за счёт него отображения и отличаются.
+4. Размещения на m мест в множестве с мощностью n:
+$$A_{n}^m=\frac{n!}{(n-m)!}$$
+Число инъекций множества размером $m$ в исходное множество. Для каждого отображения важен порядок - отображения различаются или из-за порядка, или из-за элементов без прообраза. 
+5. Сочетания из n элементов по m мест
+$$C_{n}^m=\begin{pmatrix}
+n \\
+m
+\end{pmatrix}={\frac{n!}{m!(n-m)!}}$$
+$$\begin{gather}
+\begin{pmatrix}
+n \\
+k
+\end{pmatrix}+\begin{pmatrix}
+n+1 \\
+k
+\end{pmatrix}=\begin{pmatrix}
+n \\
+k+1
+\end{pmatrix}\\
+1\\
+1 \ \ \ 1 \\
+1 \ \ \ 2 \ \ \ 1 \\
+1 \ \ \ 3 \ \ \ 3 \ \ \ 1 \\
+1 \ \ \ 4\ \ \ 6 \ \ \ 4 \ \ \ 1
+\end{gather}$$
+Число инъекций множества размером $m$ в исходное множество, не учитывающее порядок элементов. Каждое отображение однозначно определяется делением элементов исходного множества на те, для которых есть, и для которых нет прообраза. 
+6. Имеются элементы n типов
+На множестве мощностью $m$ введено разбиение.
+$$\begin{gather}
+k_{1}+k_{2}+\dots+k_{n}=m\\
+P(k_{1},k_{2},\dots,k_{n})={\frac{k_{1}+k_{2}+\ldots+k_{n}}{k_{1}\cdot k_{2}\cdot\ldots\cdot k_{n}}}
+\end{gather}$$
+7. Размещения с повторениями
+$$\overline{A_{n}^m}=n^m$$
+Число отображений $m$ в $n$. Порядок важен. Т.к. повторения, то отображения не обязаны быть инъективными.
+8. Сочетания с повторениями
+$$\overline{C_{n}^{m}}=C_{n+m-1}^{n-1}=C_{n+m-1}^m={\frac{(n+m-1)!}{m!(n-1)!}}$$
+Число отображений $m$ в $n$, неучитывающее порядок. Отображение однозначно задаётся делением исходного множества на элементы без прообраза и элементы с ним.
+Пример:
+$$\begin{gather}
+\text{Имеется n неразличимых шаров, m различимых ящиков,  так чтобы все ящики были заняты}\\
+n\leq m \\
+\cdot\cdot\cdot|\cdot\cdot|\cdot|\cdot\cdot\cdot\cdot|\cdot\\
+\text{n-1 граница разделит точки на n частей}
+\end{gather}$$
+Модель геометрической вероятности
+$$\begin{gather}
+\Omega \ - \ \text{Измеримая геометрическая фигура} \to \exists \ \text{mes}(\Omega)\\
+\mathcal{A} \ - \ \text{измеримые подмножества} \\
+P(A \in \mathcal{A})={\frac{\text{mes}(A)}{\text{mes}(\Omega)}}
+\end{gather}$$
+Основные теоремы вероятности
+9. $A\subset B \Rightarrow P(B\backslash A)=P(B)-P(A)$ (См 3 аксиому и определение разности)
+10. $A\subset B\Rightarrow P(A)\leq P(B)$ - P - это мера
+11. $\forall   A \ \ 0\leq P(A) \leq 1$  т.к. $A\subset \Omega\Rightarrow P(A)\leq P(\Omega)=1$
+12. Теорема сложения: $P(A+B)=P(A)+P(B)-P(A\cdot B)$ - это мера
+13. $P(\overline{A})=1-P(A)$  (см 1 св-во)
+14. Теорема непрерывности: $B_{n+1}\subset B_{n}\subset\dots \subset B_{2}\subset B_{1} \wedge \cap_{i}B_{i}=\varnothing \Rightarrow \exists \lim_{ n \to \infty }P(B_{n})=0$ - это мера
+##### 20/02/2025
+Примеры вероятностных моделей.
+Класс модель 
+$(\Omega, \mathcal{A}, P)$ 
+$\Omega$ - конечное множество
+$\mathcal{A}$ - все подмножества
+$P(A)=\frac{\lvert A \rvert}{\lvert \Omega \rvert}$
+Гипергеометрическая модель
+$n_1$ - предметов 1 типа
+$n_2$ - предметов 2 типа
+Выберем $m$ предметов без возвращения $m\leq n_{1}, m\leq n_{2}$
+$A_{k}$ - среди вынутых предметов $k\ -1$-го типа, $(m-k)\ -$ 2-го типа.
+$\lvert A_{k} \rvert = C_{n_{1}}^k\cdot C_{n_{2}}^{m-k}$
+$C_{n_{1}}^k$ - выбрано предметов 1 типа
+$$P(A_{k})=\frac{C_{n_{1}}^kC_{n_{2}}^{m-k}}{C_{n_{1}+n_{2}}^m}$$
+Обобщение 
+Имеются предметы $l$ типов в количествах $n_{1},n_{2},\dots,n_{l}$ выберем $m$ предметов.
+$$P(A_{k_{1},k_{2},\dots,k_{l}})=\frac{C_{n_{1}}^{k_{1}}C_{n_{2}}^{k_{2}}\dots C_{n_{l}}^{k_{l}}}{C_{n_{1}+n_{2}+\dots+nl}^m}$$
+
+Модель геометрических вероятностей.
+Геометрическая вероятность.
+$(\Omega, \mathcal{A}, P)$ 
+$\Omega$ - измеримое множество
+$\mathcal{A}$ - измеримые подмножества
+$P(A)=\frac{\mu(A)}{\mu(\Omega)}$
+Пример:
+Датчик случаёных чисел.
+Запускаем его 3 раза. Получаем 3 числа: $x$, $y$, $z \ \in [0,1]$
+$P(z>x+y)=?$
+$\omega=(x,y,z)\ -$ точка
+$\Omega=[0,1]^3$
+![[Pasted image 20250220124514.png]]
+$$\begin{gather}
+P(z>x+y)=\frac{V(A)}{V(\Omega)}=\frac{\frac{1}{6}}{1}=\frac{1}{6}
+\end{gather}$$
+Парадокс Бертрана
+В круге наугод выбирается хорда $x$.  $P(x>R\sqrt{ 3 })=?$
+Парадокс в том, что в зависимости от способа выбора случайной хорды, ответ меняется.
+Первый способ:
+A - произвольная точка.
+B - произвольная точка
+$x=[A,B]$
+$\Omega=[0,2\pi]^2$
+$$\begin{gather}
+\frac{2\pi}{3}<|x-y|< \frac{4\pi}{3}
+\end{gather}$$
+![[Pasted image 20250220125234.png]]
+$$\begin{gather}
+P(x>R\sqrt{ 3 })=\frac{S(C)}{S(\Omega)}=\frac{S(C)}{(2\pi)^2}
+\end{gather}$$
+Второй способ:
+Хорда отождествляется с её серединой
+![[Pasted image 20250220125527.png|320]]![[Pasted image 20250220125726.png|320]]
+$$\begin{gather}
+P(C)=\frac{S(C)}{S(\Omega)}=\frac{\pi\left( \frac{R}{2} \right)^2}{(2\pi)^2}=\frac{1}{4}
+\end{gather}$$
+Третий способ:
+Хорда на диаметре.
+Абсолютно непрерывная вероятностная модель
+$(\Omega, \mathcal{A}, P)$ 
+$\Omega=\mathbb{R}$ 
+$\mathcal{A}=B$  - борелевская $\sigma$-алгебра
+1. $P(A)=\int_{A} p(x)dx$
+2. $\int_{-\infty}^{+\infty}p(x)dx=1$
+3. цел: $p(x)\geq0$
+Пример: гауссовская плотность
+$$P_{a.\sigma}(x)=\frac{1}{\sqrt{ 2\pi }\sigma}e^{-\frac{(x-a)^2}{2\sigma^2}}$$
+$$\int_{-\infty}^{+\infty}p_{a,\sigma}(x)dx=\begin{vmatrix}
+\frac{x-a}{\sqrt{ 2 }\sigma}=y \\
+dx=dy\sigma \sqrt{ 2 }
+\end{vmatrix}=\int_{-\infty}^{+\infty} \frac{1}{\sqrt{ 8\pi }\sigma}e^{-y^2}\sigma \sqrt{ 2}dy=1$$
+$$\int_{b_{1}}^{b_{2}}p_{a,\sigma}(x)dx=\begin{vmatrix}
+\frac{x-a}{\sigma}=y \\
+dx=\sigma dy
+\end{vmatrix}=\frac{1}{\sqrt{ 2\pi }}\int_{\frac{b_{1}-a}{\sigma}}^{\frac{b_{2}-a}{\sigma}}e^{-y^2}dy=\varphi\left( \frac{b_{2}-a}{\sigma} \right)-\varphi\left( \frac{b_{1}-a}{\sigma} \right)$$
+Условные вероятности.
+$$\begin{gather}
+P(A|B)=P_{B}(A)=\frac{P(A\cdot B)}{P(B)}
+\end{gather}$$
+Пояснение: $n$ опытов, фиксируем события $A$. 
+$n_A$ - наступило A
+$n_B$ - наступило B
+$n_{AB}$ - наступило A и B
+$$\begin{gather}
+\frac{n_{A}}{n}\approx P(A)\\
+\frac{n_{AB}}{n_{B}}\approx P(A|B)\\
+\frac{n_{AB}}{n_{B}}=\frac{\frac{n_{AB}}{n}}{\frac{n_{B}}{n}}\approx \frac{P(AB)}{P(B)}
+\end{gather}$$
+Формула умножения
+$$P(AB)=P(A|B)\cdot P(B)$$
+Пример
+В урне имеется a белых и b чёрных шаров. Вынимаем 2 шара. Вычисляем вероятность того, что оба вынутых шара белые.
+$$P(A)=\frac{\#A}{\#\Omega}=\frac{C^2_{a}}{C^2_{a+b} }=\frac{a!\cdot2!\cdot(a+b-2)!}{(a-2)!\cdot 2! (a+b)!}=\frac{a(a-1)}{(a+b)(a+b-1)}$$
+Событие равносильно следующей совокупности событий:
+Достали белый шар, а потом достали второй белый шар
+$$P(A)=P(A_{1}A_{2})=P(A_{1})\cdot P(A_{2}|A_{1})=\frac{a}{a+b}\cdot \frac{a-1}{a+b-1}$$
+Условное вероятностное пространство
+$B, P(B)>0$
+$(\Omega,\mathcal{A},P) \to (B, \mathcal{A}_{B},P_{B})$
+$\mathcal{A}_{B}=\mathcal{A} \cap B$ - сужение алгебры $\mathcal{A}$ на B.
+$$P_{B}(A)=\frac{P(A\cdot B)}{P(B)}\geq0$$
+$$P_{B}(B)=1$$
+$$\begin{gather}
+\begin{matrix}
+A_{1}\cap A_{B}=\varnothing \\
+P_{B}(A_{1}+A_{2})=\frac{P((A_{1}+A_{2})B)}{P(B)}=\frac{P(A_{1}B+A_{2}B)}{P(B)}=\frac{P(A_{1}B)+P(A_{2}B)}{P(B)}=P_{B}(A_{1})+P_{B}(A_{2})
+\end{matrix}
+\end{gather}$$
+Теорема умножения
+$P(A_{1},A_{2},\dots,A_{n})>0\implies$
+$$\begin{gather}
+P(A_{1},A_{2},\dots,A_{n})=P(A_{1})\cdot P(A_{2}|A_{1})\cdot P(A_{3}|A_{2}A_{1})\cdot\ldots\cdot P(A_{n}|A_{n-1}\dots A_{3}A_{2}A_{1})
+\end{gather}$$
+Формулы полной вероятности и Байеса
+$$\begin{gather}
+H_{1},H_{2},\ldots,H_{l} \text{ - полная группа событий} \Leftrightarrow\\
+P(H_{i})>0\\
+H_{i}\cap H_{j}=\delta_{ij}\\
+\sum _{i}H_{i}=\Omega
+\end{gather}$$
+Теорема о полной вероятности
+$$P(A)=\sum _{i=1}^lP(A|H_{i})\cdot P(H_{i})$$
+$$\begin{gather}
+A=A\Omega=A\sum _{i}H_{i}=\sum _{i}AH_{i}
+\end{gather}$$
+Пример:
+5 белых и 3 черных шара
+вынимаем 1 шар и перекладываем в корзину с 2 белыми и 2 черными шарами
+Вынимаем шар, какой цвет?
+$$\begin{gather}
+H_{1} \text{ - переложен белый}\\
+H_{2} \text{ - переложен чёрный}\\
+P(A)=P(A|H_{1})\cdot P(H_{1})+P(A|H_{2})\cdot P(H_{2})=\frac{3}{5}\cdot \frac{5}{8}+ \frac{2}{5}\cdot \frac{3}{8}=\frac{21}{40}
+\end{gather}$$
+$$\begin{gather}
+\mathcal{H} =\{ H_{i} \} \text{ - полная группа событий}\\
+P(H_{i}|A)=\frac{P(A|H_{i})\cdot P(H_{i})}{\sum _{i=1}^lP(A|H_{i})\cdot P(H_{i})}\\
+P(H_{i}) \text{ - априорные вероятности}\\
+P(H_{i}|A) \text{ - апостериорные вероятности}\\
+\end{gather}$$
+МК1
+$$\begin{gather}
+\text{7 белых, 5 черных, 4 красных}\\
+7+5+4=16\\
+\frac{4}{16}+\frac{12}{16}\cdot \frac{4}{15}=\frac{1}{4}+\frac{1}{4} \cdot \frac{12}{15}< \frac{1}{2}\\
+\frac{5}{16}+\frac{11}{16}\cdot \frac{5}{15}=\frac{15}{48}+\frac{11}{48}=\frac{26}{48}> \frac{24}{48}
+\end{gather}$$
+
+
+
+#### 06/03/2025
+Предельные теоремы в схеме Бернулли
+Схема Бернулли
+$$\begin{gather}
+\omega=(0,1,\ldots,0,1) \text{ - последовательность 0 и 1 } \\
+P(\omega)=p^k(1-p)^{n-k}, \ p\text{ - вероятность } \\
+p^k_{n}=P(\underbrace{ \mu }_{ \text{число успехов} }=k)=C_{n}^kp^k(1-p)^{n-k} \\
+p^k_{n}=\frac{n!}{k!(n-k)!}p^k(1-p)^{n-k} \\
+\text{Пример: 3 шара с возвращениями}
+\end{gather}$$
+Наиболее вероятное число успехов
+$$\begin{gather}
+k:p_{n}^k=\text{ max }  \\
+q=1-p \\
+p^k_{n} \ \ \text{vs} \ \ p_{n}^{k+1}\Leftrightarrow \frac{n!}{p!(n-k)!}p^kq^{n-k} \ \text{ vs } \ \frac{n!}{(k+1)!(n-k-1)!}p^{k+1}q^{n-k-1} \Leftrightarrow \\
+k+q \ \text{ vs } \ np \\
+1) \ k+1<np \Rightarrow k+n<np\Rightarrow p^k_{n}<p_{n}^{k+1} \\
+2) \ k>np \Rightarrow k+q>np\Rightarrow p_{n}^k>p_{n}^{k+1}
+
+\end{gather}$$
+![[Pasted image 20250306153932.png]]
+Пример:
+$$\begin{gather}
+n_{1} & - & p_{1}=0.8 & \text{ - вероятность попадания первого } \\
+n_{2} & - & p_{2}=0.6 & \text{ - вероятность попадания второго } \\
+\end{gather}$$
+Одновременно производят 15 выстрелов. Найти вероятное число залпов, когда оба выстрела попадут.
+$$\begin{gather}
+p=p_{1}p_{2}=0.48 \\
+np=15\cdot 0.48=7.2 \\
+p^k_{n}<p_{m}^{k+1}, \ \ k+1<np\Rightarrow k=\overline{0,7} \\
+p_{n}^k>p_{n}^{k+1}, \ \ k>np\Rightarrow k=\overline{8,15} \\
+p_{15}^7 \ \text{ vs } \ p_{15}^8
+
+\end{gather}$$
+Теорема 1 (локальная Муавра-Лапласа)
+Пусть в схеме Бернулли $\sqrt{ npq }\gg{1}$, тогда 
+## $$p_n^k∼ \frac{1}{\sqrt{ 2\pi } \sqrt{ npq }}\exp\left(   {-\frac{(k-np)²}{2npq}}\right)$$
+равномерно по $x=\frac{k-np}{\sqrt{ npq }}\in[a,b]$
+$$\begin{gather}
+p_{n}^k=\frac{n!}{k!(n-k)!}p^kq^{n-k} \\
+n!\sim \left( \frac{n}{e} \right)^n \frac{1}{\sqrt{ 2\pi n }} \\
+k=np+x\sqrt{ npk }\text{  - бесконечно большая } \\
+n-k=nq-x\sqrt{ npk } \text{ - бескольнечно большая }\\
+p^k_{n}\sim \frac{\sqrt{ 2\pi n }\left( \frac{n}{e} \right)^n }{\sqrt{ 2\pi k }\left( \frac{k}{e} \right)^k\sqrt{ 2\pi(n-k) }\left( \frac{n-k}{e} \right)^{n-k}}p^kq^{n-k} =\\
+=\frac{1}{\sqrt{ 2\pi }}\cdot \sqrt{ \frac{n}{k(n-k)} } \frac{(np)^k(nq)^{n-k}}{k^k(n-k)^{n-k}}= \\
+=\frac{1}{2\pi} \sqrt{ \frac{n}{k(n-k)} }\left( \frac{np}{k} \right)^k\cdot \left( \frac{nq}{n-k} \right)^{n-k} =A\\
+\ln A=-k\ln\left( \frac{np+x\sqrt{ npq }}{np} \right)-(n-k)\ln\left( \frac{nq-x\sqrt{ npk }}{nq} \right)= \\
+=-k\ln\left( 1+x\sqrt{ \frac{q}{np} } \right)-(n-k)\ln\left( 1-x\sqrt{ \frac{p}{nq} } \right)\approx\\
+\approx (np+x\sqrt{ npk })\left( x\sqrt{ \frac{q}{np} }-\frac{1}{2}x^2 \frac{q}{np}+o\left( \frac{1}{n} \right) \right)- \\
+\left( nq-x\sqrt{ npq } \left( -x\sqrt{ \frac{p}{nq} }-\frac{x^2}{2} \frac{p}{nq}+o\left( \frac{1}{n} \right)  \right) \right) =\\
+=\cancel{ -x\sqrt{ npq } }-x^2q+\frac{1}{2}x^2q+o(1)+\cancel{ x\sqrt{ npq } }+\frac{x^2}{2}-x^2p+o(1)= \\
+=-\frac{x^2}{2}(q+p)+o(1)=-\frac{x^2}{2}+o(1) \\
+\sqrt{ \frac{n}{k(n-k)} }=\sqrt{ \frac{n}{(np+x\sqrt{ npq })(np-x\sqrt{ npk })} }= \\
+=\frac{1}{\sqrt{ n\left( p+x\sqrt{ \frac{pq}{n} } \right)\left( q-x\sqrt{ \frac{pq}{n} } \right) }}\approx \\
+\approx\frac{{1}}{\sqrt{ npk }}
+\end{gather}$$
+Теорема 2 (интегральная теорема Муавра-Лапласа)
+$$\begin{gather}
+\sum_{k=k_{1}}^{k_{2}-1} p_{n}^k=\int_{\frac{k_{1}-np}{\sqrt{ npq }}}^{\frac{k_{2}-np}{\sqrt{ npq }}} \frac{1}{\sqrt{ 2\pi }}e^{-\frac{x^2}{2}}dx=\text{Ф}\left( \frac{k_{2}-np}{\sqrt{ npq }} \right)-\text{Ф}\left( \frac{k_{1}-np}{\sqrt{ npq }} \right)
+\end{gather}$$
+
+
+
+
+Предельная теорема Пуассона:
+$$\lim_{ \begin{matrix}
+n \to  \infty \\
+p\to 0
+\end{matrix} } np=a\Rightarrow P_{n}^m\underset{n\to \infty}{\to } \frac{a^m}{m!}e^{-a}$$
+#### 27/03/2025
+Коллоквиум: 19.04 8:30 922 л.
+
+Характеристика случайного вектора:
+$\vec{\xi}=\begin{pmatrix}\xi_{1} \\ \ldots \\ \xi_{m}\end{pmatrix}$
+$M\vec{\xi}=\begin{pmatrix}M\xi_{1} \\ M\xi_{2} \\ \ldots \\ M\xi_{m}\end{pmatrix}$ - вектор математического ожидания
+Ковариационная матрица:
+$$\begin{gather}
+\Sigma=(\sigma_{ij}) \\
+\sigma_{ij}=\text{cov}(\xi_{i},\xi_{j})=M(\xi_{i}-M\xi_{i})(\xi_{j}-M\xi_{j}) \\
+\sigma_{ii}=\text{cov}(\xi_{i},\xi_{i} )=M*\xi_{i}-M\xi_{i})^2 \\
+\sigma_{ij}=\sigma_{ji} \\
+D(\xi+\eta)=D\xi+D\eta+2M(\xi-M\xi)(\eta-M\eta) \\
+\text{Вычисление cov($\xi, \eta$)}:\\
+\text{cov}(ξ,η)=\sum _{k}\sum _{j}(x_{k}-M\xi)(y_{j}-M\eta)\cdot P\left(\begin{matrix}
+\xi=x_{k} \\
+\eta=y_{j}
+\end{matrix}\right)\\
+\text{cov}(\xi,\eta)=M\xi \eta-M\xi M\eta=\sum _{k}\sum _{j}x_{k}\cdot y_{j}P(\xi=x_{k},\eta=y_{j})-M\xi M\eta
+\end{gather}$$
+Свойства ковариации:
+1. $\text{cov}(\xi,\eta)=\text{cov}(\eta,\xi)$
+2. $\text{cov}(\alpha \xi,\eta)=\alpha\text{cov}(\xi,\eta)$
+3. $\text{cov}(\xi_{1}+\xi_{2},\eta)=\text{cov}(\xi_{1},\eta)+\text{cov}(\xi_{2},\eta)$
+4. $\text{cov}(\xi,\xi)\geq0$
+$\text{cov}(\xi,\xi)=0\Leftrightarrow P(\xi=M\xi)=1$
+
+Доказательство:
+$$\begin{gather}
+\text{cov}(\xi_{1}+\xi_{2},\eta)=M(\xi_{1}+\xi_{2}-M(\xi_{1}+\xi_{2}))(\eta-M\eta)= \\
+=M((\xi_{1}-M\xi_{1})+(\xi_{2}-M\xi_{2}))(\eta-M\eta)= \\
+=M(\xi_{1}-M\xi_{1})(\eta-M\eta)+M(\xi_{2}-M\xi_{2})(\eta-M\eta)= \\
+=\text{cov}(\xi_{1},\eta)+\text{cov}(\xi_{2},\eta) \\
+ \\
+\left(\begin{matrix}
+\eta\geq  0 \\
+M\eta=0
+\end{matrix}\Rightarrow P(\eta=0)=1\right) \Rightarrow (D(\eta)=0\Rightarrow P(\eta=0)=1)\\
+0=M\eta=\sum _{\omega \in\Omega}\underbrace{ \eta(\omega) }_{ \geq 0 }\underbrace{ P(\omega) }_{ \geq 0 }\Rightarrow (\eta(\omega)\neq 0\Rightarrow P(\omega)=0)\Rightarrow  \\
+P(\eta>0)=0\Rightarrow P(\eta=0)=1
+\end{gather}$$
+
+Пример:
+Имеется урна, в которой $m_{1}$ белых шаров, $m_{2}$ чёрных, $m_{3}$ красных.
+Из этой урны с возвращением вынимается $n$ шаров.
+$\xi$ - число белых шаров среди вынутых
+$\eta$ - число черных шаров среди вынутых
+$$\begin{gather}
+P(\xi=k,\eta=j)
+\end{gather}$$
+Элементарный исход - это последовательность длины $m$, где на каждом месте находится или белый, или черный, или красный шар
+(   ,   ,   ,   ,   ...   )
+m
+$$\begin{gather}
+\alpha=\frac{N_{1}}{N_{1}+N_{2}+N_{3}} \\
+\beta=\frac{N_{2}}{N_{1}+N_{2}+N_{3}}  \\
+\gamma=\frac{N_{3}}{N_{1}+N_{2}+N_{3}}\\
+P(\omega)=\alpha^k\cdot \beta^j\cdot \gamma^{m-k-j}\cdot \underbrace{ C_{m}^k }_{ \text{выбираем места для белых} }\cdot \underbrace{ C_{m-k}^j }_{ выбираем черные }=\frac{m!}{k!j!(m-k-j)!}\alpha^k\beta^j\gamma^{(m-k-j)}
+\end{gather}$$
+Находим характеристики $M\xi,M\eta,D\xi,D\eta,\text{cov}(\xi,\eta)$
+$$\begin{gather}
+\xi=\xi_{1}+\xi_{2}+\ldots+\xi_{m} - \text{количество шаров при $m$ вытаскиваниях}\\
+M\xi=M\xi_{1}+M\xi_{2}+\ldots+M\xi_{m}=m\alpha\\
+\xi_{i}: \begin{cases}
+1,\text{ с вероятностью } \alpha \\
+0, 1-\alpha
+\end{cases}\\
+\eta=\eta_{1}+\eta_{2}+\ldots+\eta_{m}\\
+M\eta=m\beta\\
+\text{cov}(\xi,\eta)=\text{cov}(\xi_{1}+\xi_{2}+\ldots+\xi_{m},\eta_{1}+\eta_{2}+\ldots+\eta_{m})=\sum _{i=j=1}^m\text{cov}(\xi_{i},\eta_{i})+\sum _{i\neq j}\text{cov}(\xi_{i},\eta_{j})=\\
+\text{cov}(\xi_{i},\eta_{i})=M\xi_{i}\eta_{i}-M\xi_{i}M\eta_{i}=-\alpha\beta\\
+P(\xi_{i}\eta_{i}=0)=1\\
+i\neq j: \ \text{cov}(\xi_{i},\eta_{j})=M\xi_{i}\eta_{j}-M\xi_{i}M\eta_{j}=\alpha\beta-\alpha\beta=0
+\xi_{i}\eta_{j}=\begin{cases}
+1, \alpha\beta \\
+0, 1-\alpha\beta
+\end{cases}\\
+P(\xi_{i}=1,\eta_{j}=1)=P(\xi_{i}=1)P(\eta_{j}=1)\\
+=-m\alpha\beta
+\end{gather}$$
+Закон распределения случайного вектора
+Функция распределения
+$$\begin{gather}
+F_{\vec{\xi}}(\vec{x})=P(\xi_{1}<x_{1},\xi_{2}<x_{2},\ldots,\xi_{m}<x_{m}) \\
+m=2: \ \
+F_{\xi \eta}(x,y)=P(\xi<x,\eta<y)
+\end{gather}$$
+![[Pasted image 20250327160840.png]]
+Свойства:
+$$\begin{gather}
+0\leq F_{\xi \eta}(x,y)\leq 1 \\
+\lim_{ x \to -\infty } F_{\xi,\eta}(x,y)=0 \\
+\lim_{ \eta \to -\infty } F_{\xi \eta}(x,y)=0 \\
+\lim_{ x,y \to +\infty } F_{\xi \eta}(x,y)=1 \\
+\lim_{ x \to \infty } F_{\xi \eta}(x,y)=F_{\eta}(y) \\
+F_{\xi \eta}(x,y) \text{ непрерывна слева по каждому аргументу} \\
+\forall h_{1}\geq 0\forall h_{2}\geq 0\Delta_{h_{1}h_{2}}F_{\xi \eta}(x,y)\geq 0 \\
+\Delta_{h_{2}}F_{\xi \eta}(x,y)=F_{\xi \eta}(x,y+h_{2})-F_{\xi,\eta} \\
+\Delta_{h_{1}h_{2}}F_{\xi \eta}(x,y)=F_{\xi \eta}(x+h_{1},y+h_{2})-F_{\xi \eta}(x+h_{1},y)-F_{\xi \eta}(x,y+h_{2})+F_{\xi \eta}(x,y)
+\end{gather}$$
+Последнее можно представить графически - утверждение эквивалентно тому, что площадь прямоугольника со сторонами $h_{1}$ и $h_{2} \ >0$.
+
+Если свойства от 1 до 6 выполняются, то любая функция может быть представлена как функция распределения случайной величины.
+
+Пример:
+Прошлая схема, вытаскиваем 1 шар
+$\xi$ - число белых шаров (или 0, или 1)
+$\eta$ - число черных
+
+| $\xi\backslash\eta$ | 0        | 1       |
+| ------------------- | -------- | ------- |
+| 0                   | $\gamma$ | $\beta$ |
+| 1                   | $\alpha$ | 0       |
+$$\begin{gather}
+F_{\xi \eta}(x,y)=P(\xi<x,\eta<y)
+\end{gather}$$
+График:
+![[Pasted image 20250327162417.png]]
+Неравенство Коши-Буняковского:
+$$\begin{gather}
+\text{cov}(\xi,\eta)\leq \sqrt{ \text{cov}(\xi,\xi) }\sqrt{ \text{cov}(\eta,\eta) }=\sqrt{ D_{\xi}D_{\eta} }\Rightarrow  \\
+-1\leq \frac{\text{cov}(\eta,\xi)}{\sqrt{ D_{\xi} }\sqrt{ D_{y} } }\leq 1-\text{ коэффициент корреляции} \\
+\text{cov}(\xi,\eta)=0 - \text{ $\xi$ и $\eta$ некоррелированные величины}\\
+\text{Если $\xi$ и $\eta$ некоррелированные, то}\\
+D(\xi+\eta)=D\xi+D\eta+\cancelto{ 0 }{ 2\text{cov}(\xi,\eta) }
+\end{gather}$$
+Независимость случайных величин
+Случайные величины $\xi$ и $\eta$ независимые, если 
+$$\forall k,j \ P(\xi=x_{k},\eta=y_{j})=P(\xi=x_{k})\cdot P(\eta=y_{j})$$
+или
+Разбиения 
+$$\begin{gather}
+\Omega=(\xi=x_{1})+(\xi=x_{2})+\ldots+(\xi=x_{m}) \\
+\omega=(\eta=y_{1})+(\eta=y_{2})+\ldots+(\eta=y)l 
+\end{gather}$$
+или
+Алгебры $\mathcal{A}_{\xi}$ и $\mathcal{A}_{\eta}$ независимы
+$$P(\xi\in B_{1},\eta\in B_{2})=P(\xi \in B_{1})P(\eta \in B_{2})$$
+а значит
+$$P(\xi<x,\eta<y)=P(\xi<x)P(\eta<y)$$
+$$F_{\xi \eta}(x,y)=F_{\xi}(x)\cdot F_{\eta}(y)$$
+Теорема
+$$(F_{\xi \eta}(x,y)=F_{\xi}(x)\cdot F_{\eta}(y))\Rightarrow \xi \text{ и }\eta \text{ независимы}$$
+$$\begin{gather}
+P(\xi=x_{i},\eta=y_{j})=P(x_{i}\leq \xi<x_{i}+\varepsilon,y_{j}\leq \eta<y_{j}+\varepsilon)= \\
+=F_{\xi \eta}(x_{i}+\varepsilon,y_{j}+\varepsilon)-F_{\xi \eta}(x_{i}+\varepsilon,y_{j})-F_{\xi \eta}(x_{i},t_{j}+\varepsilon)+F(x_{i},y_{j})= \\
+F_{\xi}(x_{i}+\varepsilon)F_{\eta}(y_{j}+\varepsilon)-F_{\xi }(x_{i}+\varepsilon)F_{\eta}(y_{j})-F_{\xi}(x)F_{\eta}(y_{j}+\varepsilon)+F_{\xi}(x)F_{\eta}(y_{j})= \\
+=(F_{\xi}(x_{i}+\varepsilon)-F_{\xi}(x_{i}))(F_{\eta}(y_{j}+\varepsilon)-F_{\eta}(y_{j}))=P(\xi=x_{i})P(\eta=y_{j})
+\end{gather}$$
+Если $\xi$ и $\eta$ независимы, то они некоррелированны.
+$$\begin{gather}
+\text{cov}(\xi,\eta)=\sum _{i}\sum _{j}(x_{i}-M\xi)(y_{j}-M\eta)\cdot P(\xi=x_{i},\eta=y_{j})= \\
+=\sum _{i}\sum _{j}(x_{i}-M\xi)P(\xi=x)\cdot (y_{j}-M\eta)P(\eta=y_{j})= \\
+=\sum _{i}(x_{i}-M\xi)P(\xi=x)\cdot \sum _{j}(y_{j}-M\eta)P(\eta=y_{j})= \\
+=(M\xi-M\xi)(M\eta-M\eta)=0
+\end{gather}$$
+
+Пример
+
+| $\xi\backslash\eta$ | -1             | 0              | 1              | $P(\xi=i)$    |
+| ------------------- | -------------- | -------------- | -------------- | ------------- |
+| 1                   | $\frac{1}{6}$  | $\frac{1}{6}$  | $\frac{1}{6}$  | $\frac{1}{2}$ |
+| -1                  | $\frac{1}{4}$  | 0              | $\frac{1}{4}$  | $\frac{1}{2}$ |
+| $P(\eta=j)$         | $\frac{5}{12}$ | $\frac{2}{12}$ | $\frac{5}{12}$ | 1             |
+$P(\xi=1,\eta=0)=0\neq P(\xi=1)P(\eta=0)=\frac{1}{2}\cdot \frac{1}{6}= \frac{1}{12}$
+$\xi$ и $\eta$ зависимы
+$$\begin{gather}
+M\xi \eta=1\cdot (-1)\cdot \frac{1}{6}+1\cdot 1\cdot  \frac{1}{6}+(-1)(-1)\cdot  \frac{1}{4}=0 \\
+M\xi=1\cdot  \frac{1}{2}+(-1)\cdot  \frac{1}{2}=0 \\
+M\eta=(-1)\cdot \frac{5}{12}+0\cdot \frac{2}{12}+1\cdot \frac{5}{12}=0
+\end{gather}$$
+Зависимы и некоррелированы
+Теорема о свёртке
+Если $\xi$ и $\eta$ независимы, то $P(\xi+\eta=k)=\sum_{j}P(\xi=j)P(\eta=k-j)$
+$P(\xi+\eta=k)=\sum_{j}P(\xi+\eta=k,\xi=j)$
+
+Пусть есть 2 Пуассоновские величины
+$\xi\sim P(\lambda)$
+$\eta\sim P(\mu)$
+$P(\xi+\eta=k)=\sum_{j=0}^kP(\xi=j,\eta=k-k)=\sum_{j=0}^kP(\xi=j)P(\eta=k-j)$
+$$=\sum _{k=0}^k \frac{\lambda^j}{j!}e^{-\lambda}\cdot  \frac{\mu^{k-j}}{(k-j)!}e^{-\mu}k!=\frac{e^{-(\lambda+\mu)}(\lambda+\mu)^k}{k!}\sim P(\lambda+k)$$
+#### 03/04/2025
+Геометрический смысл коэффициентов корреляции.
+$$\begin{gather}
+\operatorname{cov} (\xi,\eta) - \text{скалярное произведение} 
+\end{gather}$$
+$\xi$ и $\eta$ некоррелируют $\Rightarrow M(\xi-M\xi)(\eta-M\eta)=0 \Leftrightarrow \xi-M\xi \perp \eta-M\eta$
+$(\Omega, \mathcal{A}, P)$
+$\xi(\omega)=\begin{pmatrix}\xi(\omega_{1}) \\ \xi(\omega_{2}) \\ \ldots \\ \xi(\omega_{n}) \end{pmatrix}$
+$\hat{\eta}=\alpha \xi+\beta$
+$\eta-\hat{\eta}\perp_{1}\leftrightarrow M((\eta-\hat{\eta})1)=0$
+$\eta-\hat{\eta}\perp \xi\leftrightarrow M((\eta-\hat{\eta})\xi)=0$
+$$\begin{gather}
+\begin{cases}
+M(\eta-\alpha \xi-\beta)=0 \\
+M(\eta \xi-\alpha \xi \xi-\beta \xi)=0 
+\end{cases}\Rightarrow 
+\end{gather}$$
+$$\begin{gather}
+\alpha= \frac{\operatorname{cov} (\xi,\eta)}{D\xi} \\
+\beta=M\eta- \frac{\operatorname{cov} (\xi,\eta)}{D\xi}M\xi \\
+\hat{\eta}=\frac{\operatorname{cov} (\xi,\eta)}{D\xi}\xi+M\eta-\frac{\operatorname{cov} (\xi,\eta)}{D\xi}M\xi \\
+\hat{\eta}=M\eta-\frac{\operatorname{cov} (\xi,\eta)}{D\xi}(\xi-M\xi) - \text{уравнение линейной регрессии} \\
+D(\eta-\hat{\eta})=D\left( \eta-M\eta-\frac{\operatorname{cov} (\xi,\eta)}{D\xi}(\xi-M\xi)  \right)= \\
+=M\left( \eta-M\eta-\frac{\operatorname{cov} (\xi,\eta)}{D\xi}(\xi-M\xi) \right)^2= \\
+=M\left( (\eta-M\eta)^2-\frac{2\operatorname{cov} (\xi,\eta)}{D\xi}(\eta-M\eta)(\xi-M\xi)+\frac{\operatorname{cov}^2(\xi,\eta) }{(D\xi)^2}(\xi-M\xi)^2 \right)= \\
+=D\eta-\frac{2\operatorname{cov} (\xi,\eta)}{D\xi} \operatorname{cov} (\xi,\eta)+\frac{\operatorname{cov} ^2(\xi,\eta)}{(D\xi)\cancel{ ^2 }}\cancel{ D\xi }=D\eta-\frac{\operatorname{cov} ^2(\xi,\eta)}{D\xi}= \\
+=D\eta(1-r^2_{\xi,\eta}) \\
+r_{\xi,\eta} - \text{коэффициент корреляции}
+\end{gather}$$
+$$\begin{gather}
+r_{\xi,\eta}=\pm 1 \Rightarrow \begin{matrix}
+D(\eta-\hat{\eta})=0 \\
+M(\eta-\hat{\eta})=0
+\end{matrix}\Rightarrow P(\hat{\eta}=\eta)=1\Rightarrow \eta=\alpha \xi+\beta \\
+r_{\xi,\eta}=0\Rightarrow \begin{matrix}
+D\hat{\eta}=0 \\
+D(\eta-\hat{\eta})=D\eta
+\end{matrix}\Rightarrow \hat{\eta}=\text{const} =M\eta\Rightarrow P(\hat{\eta}=M\eta)=1 \\
+r_{\xi,\eta}- \text{мера линейной зависимости между $\xi$ и $\eta$}
+\end{gather}$$
+Про коэффициент детерминации нам не рассказали.
+##### Условный закон распределения
+Условным законом распределения $\xi$ при условии $\beta=x_{k}$ называется набор значений $\eta$ и условных вероятностей $P(\eta=y_{j}|\xi=x_{k})$
+
+Распределение 3 шаров по 3 корзинам
+$\xi$ - число шаров в 1 корзине
+$\eta$ - число шаров в 2 корзине
+
+| $\xi\backslash \eta$ | 0              | 1              | 2              | 3              |
+| -------------------- | -------------- | -------------- | -------------- | -------------- |
+| 0                    | $\frac{1}{27}$ | $\frac{3}{27}$ | $\frac{3}{27}$ | $\frac{1}{27}$ |
+| 1                    | $\frac{3}{27}$ | $\frac{6}{27}$ | $\frac{3}{27}$ | 0              |
+| 2                    | $\frac{3}{27}$ | $\frac{3}{27}$ | 0              | 0              |
+| 3                    | $\frac{1}{27}$ | 0              | 0              | 0              |
+
+| $\eta\backslash i$ | 0             | 1             | 2             | 3             |                                 |                                 |
+| ------------------ | ------------- | ------------- | ------------- | ------------- | ------------------------------- | ------------------------------- |
+| $P(\eta=j,\xi=0)$  | $\frac{1}{8}$ | $\frac{3}{8}$ | $\frac{3}{8}$ | $\frac{1}{8}$ | $M(\eta\vert\xi=0)=\frac{3}{2}$ | $D(\eta\vert\xi=0)=\frac{3}{4}$ |
+| $P(\eta=j,\xi=1)$  | $\frac{1}{4}$ | $\frac{2}{4}$ | $\frac{1}{4}$ | $0$           | $M(\eta\vert\xi=1)=1$           | $D(\eta\vert\xi=1)=\frac{1}{2}$ |
+| $P(\eta=j,\xi=2)$  | $\frac{1}{2}$ | $\frac{1}{2}$ | $0$           | $0$           | $M(\eta\vert\xi=2)=\frac{1}{2}$ | $D(\eta\vert\xi=2)=\frac{1}{4}$ |
+| $P(\eta=j,\xi=3)$  | $1$           | $0$           | $0$           | $0$           | $M(\eta\vert\xi=3)=0$           | $D(\eta\vert\xi=3)=0$           |
+Условное математическое ожидание:
+$$M(\eta|\xi=x_{k})=\sum _{j}y_{j}P(y=y_{j}|\xi=x_{k})$$
+Условная дисперсия:
+$$D(\eta\vert\xi=x_{k})=M(\eta-M(\eta\vert\xi=x_{k}))^2$$
+
+$$\begin{gather}
+M(\eta\vert\xi=x_{k})=\varphi(\xi)
+\end{gather}$$
+Условное математическое ожидание как случайная величина:
+$M(\eta\vert\xi)=\varphi(\xi)$
+
+
+| $k$                 | $\frac{3}{2}$  | $1$             | $\frac{1}{2}$  | $0$            |
+| ------------------- | -------------- | --------------- | -------------- | -------------- |
+| $P(\eta\vert\xi=k)$ | $\frac{8}{27}$ | $\frac{12}{27}$ | $\frac{6}{27}$ | $\frac{1}{27}$ |
+(строка в первой таблице)
+
+$M\varphi(\xi)=\frac{3}{2}\cdot \frac{8}{27}+1\cdot \frac{12}{27}+ \frac{1}{2}\cdot \frac{6}{27}+ 0\cdot \frac{1}{27}=1$
+Теорема:
+Математическое ожидание от условного математического ожидания равно безусловному математическому ожиданию
+$$M(M(\eta\vert\xi))=M\eta$$
+$$\begin{gather}
+M(M(\eta\vert\xi))=\sum _{k} M(\eta\vert\xi=x_{k})\cdot P(\xi=x_{k})= \\
+=\sum _{k}\sum _{j}y_{j}\cdot P(\eta=y_{j}\vert\xi=x_{k})\cdot P(\xi=x_{k})= \\
+=\sum _{k}\sum _{j}y_{j}P(\eta=y_{j}, \xi=x_{k})= \\
+=\sum _{j}y_{j}P(\eta=y_{j})=M\eta
+\end{gather}$$
+Условное математическое ожидание  $M(\eta,\xi)$  - регрессия $\eta$ на $\xi$
+![[Pasted image 20250403161802.png]]
+Если $\eta=\varphi(\xi)=\alpha\xi+\beta$, то $\xi$ и $\eta$ связаны линейной корреляционной зависимостью
+$\hat{\eta}=M\eta+\frac{\operatorname{cov}(\xi,\eta)}{D\xi}(\xi-M\xi)$
+$\hat{\eta}=1+\frac{-\frac{1}{3}}{\frac{2}{3}}(\xi-1)=1-\frac{1}{2}(\xi-1)=\frac{3}{2}-\frac{\xi}{2}$
+Можно доказать, что $\min_{g}M(\eta-g(\xi))^2=M(\eta-\varphi(\xi))^2$
+
+##### Неравенство Чебышёва, закон больших чисел Чебышёва
+Неравенство
+
+$$\begin{gather}
+\exists M\xi\Rightarrow \forall\varepsilon>0 \left( P(\lvert \xi \rvert >\varepsilon)\leq  \frac{M(\xi)}{\varepsilon} \right) \\
+\lvert \xi \rvert =\lvert \xi \rvert \cdot I(\lvert \xi \rvert >\varepsilon)+\lvert \xi \rvert \cdot I(\lvert \xi \rvert \leq \varepsilon)\geq \lvert \xi \rvert I(\lvert \xi \rvert >\varepsilon)>\varepsilon I(\lvert \xi \rvert >\varepsilon) \\
+M(\xi)>M(\varepsilon I(\lvert \xi \rvert >\varepsilon))=\varepsilon P(\lvert \xi \rvert >\varepsilon) \text{ делим на $\varepsilon$ и получаем неравенство}
+\end{gather}$$
+
+$$\begin{gather}
+\exists D\xi\Rightarrow \left( P(\lvert \xi-M\xi \rvert <\varepsilon)\leq \frac{D\xi}{\varepsilon^2} \right) \\
+\text{Подставляем вместо } \xi \ \ \xi-M\xi \\
+P(\lvert \xi-M\xi \rvert >\varepsilon)=P(\lvert \xi-M\xi \rvert ^2>\varepsilon^2)\leq \frac{M(\xi-M\xi)^2}{\varepsilon^2 }=\frac{D\xi}{\varepsilon^2}
+\end{gather}$$
+Следствие:
+$\forall\varepsilon>0 \ P(\lvert \xi-M\xi \rvert\leq\varepsilon)\geq 1-\frac{D\xi}{\varepsilon^2}$
+
+Закон больших чисел Чебышёва (збч)
+$$\begin{gather}
+\xi_{1},\xi_{2},\ldots,\xi_{n} - \text{последовательность независимых случайных величин, таких что }D\xi_{i}\leq C \\
+\Rightarrow P\left( \left\lvert  \frac{\xi_{1}+\xi_{2}+\ldots+\xi_{n}}{n}-\frac{M\xi_{1}+M\xi_{2}+\ldots+M\xi_{n} }{n}  \right\rvert \geq \varepsilon  \right)\underset{n\to \infty}{\to}0
+
+\end{gather}$$
+
+$$\begin{gather}
+\zeta_{n}=\frac{\zeta_{1}+\zeta_{2}+\ldots+\zeta_{n}}{n} \\
+M\zeta_{n}=\frac{M\zeta_{1}+M\zeta_{2}+\ldots+M\zeta_{n}}{n} \\
+P(\lvert \zeta_{n}-M\zeta_{n} \rvert >\varepsilon)\leq \frac{D\zeta_{n}}{\varepsilon^2} \\
+D\zeta_{n}=D\left( \frac{1}{n}(\zeta_{1}+\ldots+\zeta_{n}) \right)=\frac{1}{n^2}\sum_{i=1}^{n} D\zeta_{i}=\frac{C}{n}
+\end{gather}$$
+
+$$\begin{gather}
+M\xi_{i}=a\forall i \\
+\forall\varepsilon>0 P\left( \left\lvert  \frac{\xi_{1}+\ldots+\xi_{n}}{n} -a \right\rvert \geq \varepsilon  \right)\underset{n\to \infty}{\to}0\\
+\xi_{i}=\mu_{i} - \text{число успехов в $i$-м испытании Бернулли,} \mu=\sum _{i=1}^n\mu_{i}\\
+P\left( \left\lvert  \frac{\mu}{n}-p  \right\rvert \geq \varepsilon \right)\underset{n\to \infty}{\to}0
+\end{gather}$$
+
+#### 10/04/2025
+Производящая функция
+$$\begin{gather}
+M\xi_{i}^{[r_{1}]}\xi_{j}^{[r_{2}]}=\frac{ \partial^{(r_{1}+r_{2})} }{ \partial z_{i}^{r_{1}}\partial z_{j}^{r_{2}} } \psi_{\xi}(z_{1},\ldots,z_{m}) \\
+\text{Производящая функция последовательности: } \\
+\sum a_{n}z^n\to \{ a_{n} \}
+\end{gather}$$
+Производящая функция $\psi_{\xi}(z)$ целочисленной случайной величины $\xi$ называется 
+$$\psi_{\xi}(z)=\sum _{n}p_{n}z^n$$
+где $p_{n}=P(\xi=n)$
+$$\psi_{\xi}(z)=Mz^\xi$$
+
+Пример:
+Биномиальное распределение:
+$$\begin{gather}
+\xi\sim B(n,p) \\
+p_{k}=C_{n}^kp^kq^{n-k} \\
+\psi_{\xi}(z)=\sum_{k=0}^{n} C_{n}^k p^kq^{n-k}z^k=\sum_{k=0}^{n} C_{n}^k(pz)^kq^{n-k}=(pz+q)^n 
+\end{gather}$$
+Пуассон:
+$$\begin{gather}
+\xi\sim P_{0}(\lambda) \\
+p_{k}=\frac{\lambda^k}{k!}e^{-\lambda} \\
+\psi_{\xi}(z)=\sum_{k=0}^{\infty} \frac{\lambda^k}{k!}e^{-\lambda l}z^k=e^{\lambda(z-1)}
+\end{gather}$$
+Геометрический:
+(число неудач до первого успеха в схеме Бернулли)
+$$\begin{gather}
+p(\xi=k)=q^kp \\
+\psi_{\xi}(z)=\sum_{n=0}^{\infty} q^kpz^k=\frac{p}{1-qz}
+\end{gather}$$
+
+Свойства:
+1. $\psi_{\xi}(z)$ определено на $(-1,1]$
+$$\begin{gather}
+\lvert p_{k}z^k \rvert \leq p_{k} \\
+\sum p_{k}=1\Rightarrow \sum p_{k}z^k \text{ сходится на } (-1,1]
+\end{gather}$$
+2. $\psi_{\xi}(1)=1$
+$$\sum p_{k}=1$$
+3. $p_{k}=P(\xi=k)=\frac{1}{k!}\psi_{\xi}^{(k)}(0)$
+4. $M\xi=\psi_{\xi}'(1)$
+$$\begin{gather}
+\psi_{\xi}'(z)=\sum_{k=0}^\infty kp_{k}z^{k-1} \\
+\psi'_{\xi}(1)=\sum_{k=0}^{\infty} kp_{k}=M\xi
+\end{gather}$$
+5. $M\xi^{[r]}=\psi_{\xi}^{(r)}(1)$
+\[r\] - факториальный момент
+$$\xi^{[r]}=\xi(\xi-1)\ldots(\xi-r+1)$$
+$$D\xi=M\xi^{[2]}+M\xi-(M\xi)^2\Rightarrow $$
+$$D\xi=\psi_{\xi}''(1)+\psi_{\xi}'(1)-(\psi_{\xi}'(1))^2$$
+
+Теорема (свойство мультипликативности)
+Если $\xi_{1},\xi_{2},\ldots,\xi_{n}$ - независимые целочисленные случайные величины с производящими функциями $\psi_{\xi_{1}},\psi_{\xi_{2}},\ldots,\psi_{\xi_{n}}$ соответственно, то
+$$\psi_{\xi_{1}+\xi_{2}+\ldots++\xi_{n}}(z)=\psi_{\xi_{1}}(z)\cdot \psi_{\xi_{2}}(z)\cdot \ldots\cdot {\psi_{\xi_{n}}}(z)$$
+
+$$\begin{gather}
+\psi_{\rho}(z)=Mz^{\rho}=Mz^{\xi_{1}+\xi_{2}+\ldots+\xi_{n}}=M(z^{\xi_{1}}z^{\xi_{2}}\cdot \ldots\cdot z^{\xi_{n}}) 
+\end{gather}$$
+матожидание от произведения независимых величин равно произведению
+
+Пример:
+Выбираются 3 цифры от 0 до 9
+$$P\left( \sum =k \right)=?$$
+
+$$\begin{gather}
+\xi-\text{выбор цифры. Дискретный равномерный закон} \\
+P(\xi=k)=\frac{1}{10} \\
+\psi_{\xi}=\frac{1}{10}\sum_{k=0 }^{9}z^9=\frac{1}{10}\cdot \frac{1-z^{10}}{1-z} \\
+\Sigma=\xi_{1}+\xi_{2}+\xi_{3} \\
+\psi_{\Sigma}(z)=\frac{1}{10^3} \left( \frac{1-z^{10}}{1-z} \right)^3=\frac{1}{10^3}\cdot (1-3z^{10}+3z^{20}-z^{30})(1+3z+6z^2+\ldots+C_{k+2}^kz^k+\ldots) \\
+p_{k}=\begin{matrix}
+0\leq k\leq 9 & C_{k+2}^k \\
+10\leq k\leq 19 & 1\cdot C_{k+2}^k-3\cdot C_{k-8}^{k-10} \\
+20\leq k\leq 27  & 1\cdot C_{k+2}^k-3C_{k-8}^{k-10}+3C_{k-18}^{k-20}
+\end{matrix} 
+\end{gather}$$
+
+$\xi_{1},\xi_{2}$ - независимые, распределены по пуассоновскому закону
+$$\begin{gather}
+\xi_{1}=P_{0}(\lambda) \\
+\xi_{2}=P_{0}(\mu) \\
+\psi_{\xi_{1}}=e^{\lambda(z-1)} \\
+\psi_{\xi_{2}} =e^{\mu(z-1)} \\
+\psi_{\xi_{1}+\xi_{2}}=e^{(\lambda+\mu)(z-1)}\sim P_{0}(\lambda+\mu)
+\end{gather}$$
+$\xi_{1},\xi_{2}$ - геометрический закон и независимы
+$$\begin{gather}
+\psi_{\xi_{1}+\xi_{2}}(z)=\left( \frac{p}{1-qz} \right)^2=\frac{p^2}{q}\left( \frac{1}{1-qz} \right)'=\frac{p^2}{q}\left( \sum_{k=0}^{\infty} (qz)^k \right)'=\sum_{k=0}^{\infty} p^2(k+1)q^kz^k\\
+p(\xi_{1}+\xi_{2})=p^2(k+1)q^{k}
+\end{gather}$$
+
+Теорема о непрерывности:
+Пусть 
+$$\begin{gather}
+p_{k}^{(r)},k\in \mathbb{N}_{0}-r\text{-й закон распределения}
+\end{gather}$$
+С производящими функциями $\psi^{(r)}(z)$. Тогда:
+$$\begin{gather}
+\exists \lim_{ r \to \infty } p_{k}^{(r)}=p_{k},\forall k\in \mathbb{N}_{0}\Leftrightarrow \forall z\in[0,1)\exists \lim_{ r \to \infty } \psi^{(r)}(z)=\psi(z)
+\end{gather}$$
+
+Пример:
+$$\xi^{(r)}-\mathcal{B} \left( r, p_{r}= \frac{a}{r} \right)$$
+$$\begin{gather}
+\psi^{(r)}(z)=(p_{r}z+q)^r=\left( 1+\frac{a}{r}(z-1) \right)^r\overset{r\to \infty}{\to}\exp\left(  {\lim_{ r \to \infty } \frac{a}{r}(z-1)\cdot r} \right)=e^{a(z-1)}\sim P_{0} (a)
+\end{gather}$$
+
+
+$$\begin{gather}
+\Rightarrow  \\
+\lvert \psi^{(r)}(z)-\psi(z) \rvert =\left\lvert  \sum_{k=0}^{\infty} (p_{k}^{(r)}-p_{k})z^k  \right\rvert =\left\lvert  \sum_{k=0}^{N-1} (p_{k}^{(r)}-p_{k})z^k  \right\rvert +\left\lvert  \sum_{k=N}^{\infty}  (p_{k}^{(r)}-p_{k})z^k \right\rvert \leq  \\
+\forall\varepsilon>0\exists N(\varepsilon) \ \frac{z^N}{1-z}< \frac{\varepsilon}{2}  \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \leq \sum_{k=0}^{N-1} \lvert p_{k}^{(r)}-p_{k} \rvert +\sum_{k=N}^{\infty} z^k=N\cdot  \frac{\varepsilon}{2N}+\frac{z^N}{1-z}<\varepsilon \\
+p_{l}^{(r)}\underset{r\to \infty}{\to }p_{k} \\
+\exists r(\varepsilon)\lvert p_{k}^{(r)}-p_{k} \rvert < \frac{\varepsilon}{2N}
+\end{gather}$$
+$$\begin{gather}
+\Leftarrow   \\
+0\leq p_{k}^{r }\leq 1\to r_{1} &  &  &  &  p_{0}^{(r_{1})}\to p_{r} \\
+0  & 1 & 2 & 3 & 0\leq p_{1}^{(r_{1})}\leq 1\to r_{2} & p_{1}^{(r_{1})}\to p_{1}\\
+p_{0}^{(1)} & p_{1}^{(1)} & p_{2}^{(1)}  & \\
+p_{0}^{(2)}  & p_{2}^{(2)} & p_{2}^{(2)} & \\
+\ldots  & \ldots & \ldots &  \\
+p_{?} &  &  & 
+\end{gather}$$
+Берём диагональ (столбцы - подпоследовательности)
+$$\begin{gather}
+p_{k}^{(r)}\to p_{k} \ \forall k=0,1,\ldots \\
+\psi^{(r)}(z)\to \psi(z)
+\end{gather}$$
+То такие частичные пределы единственны
+
+$$\xi\sim \psi_{\xi}(z) \ \ \ \  \eta=2\xi-1 \ \ \ \ \psi_{\eta}(z)=?$$
+$$\begin{gather}
+\psi_{\eta}(z)=Mz^{\eta}=M^{2\xi-1}=z^{-1}M(z^{2})^{\xi}=z^{-1}\psi_{\xi}(z^2)
+\end{gather}$$
+
+
+Общее определение случайной величины
+$(\Omega,\mathcal{A},P)$
+Функция $\xi(\omega)$ - случайная величина, если $\forall x\in \mathbb{R} \ \ \ (\omega:\xi(\omega)<x) \in \mathcal{A}$
+$$\begin{gather}
+P(\xi<x)=F_{\xi}(x) - \text{ функция распределения случайной величины}
+\end{gather}$$
+Свойства:
+$$\begin{gather}
+0\leq F_{\xi}(x)\leq 1 \\
+x_{1}<x_{2}\Rightarrow F_{\xi}(x_{1})\leq F_{\xi}(x_{2}) \\
+F_{\xi}(x) \text{ непрерывна слева} \\
+\lim_{ x \to -\infty } F_{\xi}(x)=0, \lim_{ x \to +\infty } F_{\xi}(x) =1 \\
+ \\
+A_{n}=(-\infty,-n) &  \cap_{n}A_{n}=\varnothing \\
+\Rightarrow \text{по теореме непрерывности}  &  \lim_{ n \to \infty } P(A_{n}=0)\\
+\lim_{ n \to \infty } F_{\xi}(-n)=0  & \lim_{ n \to \infty } F_{\xi}(x)-F_{\xi}\left( x-\frac{1}{n} \right)=0
+\end{gather}$$
+Вероятность принять значение в борелевском множестве:
+$$\begin{gather}
+P(a\leq \xi<b)=F_{\xi}(b)-F_{\xi}(a) \\
+P(\xi\geq b)=1-F_{\xi}(b) \\
+P(\xi=b)=F_{\xi}(b+0)-F_{\xi}(b)
+\end{gather}$$
+Вывод: с помощью функции распределения однозначно определяются вероятности борелевских множеств.
+$$P_{\xi}([a,b))=F_{\xi}(b)-F_{\xi}(a)$$
+$\mathcal{B}$ - конечные объединения $[a_{i},b_{i})$
+Мера $P_{\xi}$ определена на $\mathcal{B}_{0}$
+$$(\Omega,\mathcal{A} ,P)\overset{\xi}{\to }(R,\mathcal{B} ,P_{\xi})$$
+Плотность распределения $p_{\xi}:$
+$$\begin{gather}
+P(a\leq \xi\leq b)=\int_{a}^bp_{\xi}(x)dx
+\end{gather}$$
+$$F_{\xi}(x)=\int_{-\infty}^{x}p_{\xi}(y)dy$$
+Абсолютно непрерывная случайная величина
+x - точка непрерывности - $\exists F'_{\xi}(x)=p_{\xi}(x)$
+
+
