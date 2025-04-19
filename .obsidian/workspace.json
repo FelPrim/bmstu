@@ -4,67 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "47cac3ae63fa18ad",
+        "id": "4d954d3cfaac0ad4",
         "type": "tabs",
         "children": [
           {
-            "id": "b3fc5b19108433de",
+            "id": "52af1f2930f24548",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown/4 семестр/ПТП.md",
+                "file": "Markdown/4 семестр/уравнения математической физики/Семинары.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ПТП"
-            }
-          },
-          {
-            "id": "5f5477b8366b57d1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "a2846f0b1ab8b284",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled 1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled 1"
-            }
-          },
-          {
-            "id": "60c40306e4b9132b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Семинары"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -213,10 +170,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "740ed460648d1a84",
+  "active": "52af1f2930f24548",
   "lastOpenFiles": [
-    "Untitled 2.md",
     "Untitled 1.md",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
+    "Untitled.md",
+    "Untitled 2.md",
     "задания/Физика ДЗ_ФН_Варианты. Семестр 1.pdf",
     "задания/УМФ Модуль_1_задание_2.pdf",
     "задания/УМФ Модуль_1_задание_1.pdf",
@@ -227,12 +186,10 @@
     "books/УМФ Тихонов-Самарский.pdf",
     "books/ОС Vvedenie_v_operatsionnye_sistemy.pdf",
     "books/ОС OpenMP.pdf",
-    "Untitled.md",
     "Markdown/4 семестр/ПТП.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
     "Markdown/4 семестр/Операционные системы/Занятие ОС 12032025.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.md",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
     "Markdown/4 семестр/Теоретическая механика/Лекции.md",
     "Markdown/4 семестр/уравнения математической физики/ДЗ.md",
     "obsidian stuff/attachments/Pasted image 20250417122731.png",
