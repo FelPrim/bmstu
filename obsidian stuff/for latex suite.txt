@@ -10,7 +10,9 @@
     {trigger: "\\[", replacement: "\\left[ $0 \\right] $1", options: "mA"},
     {trigger: "\\|", replacement: "\\lvert $0 \\rvert $1", options: "mA"},
     {trigger: "const", replacement: "\\text{const} $0", options: "mA"},
-
+    {trigger: "@n", replacement: "\\nabla $0", options: "mA"},
+    {trigger: "@f", replacement: "\\varphi $0", options: "mA"},
+    {trigger: "@F", replacement: "\\Phi $0", options: "mA"},
     // Dashes
 	// {trigger: "--", replacement: "–", options: "tA"},
 	// {trigger: "–-", replacement: "—", options: "tA"},
@@ -222,7 +224,7 @@
     {trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", options: "rm"},
     {trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA"},
 
-    {trigger: /([^\\])int/, replacement: "[[0]]\\int", options: "mA", priority: -1},
+    {trigger: /([^\\])int/, replacement: "[[0]]\\int ", options: "mA", priority: -1},
     {trigger: "\\int", replacement: "\\int $0 \\, d${1:x} $2", options: "m"},
     {trigger: "dint", replacement: "\\int_{${0:0}}^{${1:1}} $2 \\, d${3:x} $4", options: "mA"},
     {trigger: "oint", replacement: "\\oint", options: "mA"},

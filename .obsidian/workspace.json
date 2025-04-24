@@ -4,72 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "4d954d3cfaac0ad4",
+        "id": "e39b8a8b12a26b5f",
         "type": "tabs",
         "children": [
           {
-            "id": "52af1f2930f24548",
+            "id": "d55f9f677f46ec1d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md",
+                "file": "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ДЗ"
+              "title": "Домашнее задание 2"
             }
           },
           {
-            "id": "6a5df984b5531e1a",
+            "id": "b26054fb6ce98fd5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Лекции"
-            }
-          },
-          {
-            "id": "b983f1aaa68f002d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/уравнения математической физики/ДЗ.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ДЗ"
-            }
-          },
-          {
-            "id": "0db5046ffbad376e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/уравнения математической физики/Семинары.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Семинары"
-            }
-          },
-          {
-            "id": "e213bce1236ac06e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/Операционные системы/Семинары.md",
+                "file": "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
                 "mode": "source",
                 "source": false
               },
@@ -77,8 +35,7 @@
               "title": "Семинары"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -217,6 +174,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "github-sync:Sync with Remote": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -225,10 +184,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e213bce1236ac06e",
+  "active": "d55f9f677f46ec1d",
   "lastOpenFiles": [
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
+    "obsidian stuff/attachments/Pasted image 20250424030014.png",
+    "obsidian stuff/attachments/Pasted image 20250424025955.png",
+    "obsidian stuff/attachments/Pasted image 20250424025945.png",
+    "obsidian stuff/attachments/Pasted image 20250424025936.png",
+    "obsidian stuff/attachments/Pasted image 20250424025917.png",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
+    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
+    "obsidian stuff/attachments/Pasted image 20250422183205.png",
+    "obsidian stuff/for latex suite.txt~",
+    "Markdown/4 семестр/Операционные системы/Лекции.md",
     "Markdown/4 семестр/ПТП.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
+    "obsidian stuff/attachments/Pasted image 20250421153945.png",
+    "obsidian stuff/attachments/Pasted image 20250421153112.png",
+    "Markdown/4 семестр/Теоретическая механика/Семинары.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
+    "Markdown/4 семестр/Операционные системы/Семинары.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md",
     "Markdown/4 семестр/Физика/Семинары.md",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/vim",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
@@ -247,31 +225,11 @@
     "задания/Термех ДЗ1.pdf",
     "задания",
     "books/УМФ Тихонов-Самарский.pdf",
-    "books/ОС Vvedenie_v_operatsionnye_sistemy.pdf",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
     "Markdown/4 семестр/Операционные системы/Занятие ОС 12032025.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.md",
-    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
     "obsidian stuff/attachments/Pasted image 20250417122731.png",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
     "Markdown/4 семестр/Физика/Лекции.md",
     "Без названия.md",
-    "Без названия 1.md",
-    "result/Допы.md",
-    "result/test.md",
-    "result/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.md",
-    "obsidian stuff/attachments/Pasted image 20250407224722.png",
-    "Markdown/test.md",
-    "Markdown/4 семестр/Операционные системы/Семинары.md",
-    "Markdown/4 семестр/Операционные системы/код из гитлаба.md",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
-    "obsidian stuff/attachments/Pasted image 20250410134115.png",
-    "obsidian stuff/attachments/Pasted image 20250408174218.png",
-    "obsidian stuff/attachments/Pasted image 20250408161415.png",
-    "obsidian stuff/attachments/Pasted image 20250408160707.png",
-    "obsidian stuff/attachments/Pasted image 20250408143207.png",
-    "obsidian stuff/attachments/Pasted image 20250408135355.png",
-    "obsidian stuff/attachments/Pasted image 20250408134528.png",
-    "obsidian stuff/attachments/Pasted image 20250403161802.png"
+    "obsidian stuff/attachments/Pasted image 20250407224722.png"
   ]
 }
