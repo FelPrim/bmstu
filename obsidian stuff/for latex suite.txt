@@ -11,6 +11,7 @@
     {trigger: "\\|", replacement: "\\lvert $0 \\rvert $1", options: "mA"},
     {trigger: "const", replacement: "\\text{const} $0", options: "mA"},
     {trigger: "@n", replacement: "\\nabla $0", options: "mA"},
+    {trigger: "@x", replacement: "\\chi $0", options: "mA"},
     {trigger: "@f", replacement: "\\varphi $0", options: "mA"},
     {trigger: "@F", replacement: "\\Phi $0", options: "mA"},
     // Dashes
@@ -113,6 +114,7 @@
 
     {trigger: "tgg", replacement: "\\operatorname{ tg } ", options: "mA"},
 	{trigger: "thh", replacement: "\\operatorname{ th } $0", options: "mA"},
+    {trigger: "cth", replacement: "\\operatorname{ cth } $0", options: "mA"},
     {trigger: "ctg", replacement: "\\operatorname{ ctg } $0", options: "mA"},
     {trigger: "arctg", replacement: "\\operatorname{ arctg } ", options: "mA"},
     {trigger: "shh", replacement: "\\operatorname{ sh } ", options: "mA"},
