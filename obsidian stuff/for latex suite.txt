@@ -44,7 +44,7 @@
 	{trigger: "@O", replacement: "\\Omega", options: "mA"},
 	{trigger: "ome", replacement: "\\omega", options: "mA"},
 	{trigger: "Ome", replacement: "\\Omega", options: "mA"},
-
+        {trigger: "@r", replacement: "\\rho", options: "mA"},
     // Text environment
 {trigger: "cov", replacement: "\\operatorname{cov} $0", options: "mA"},
     {trigger: "txt", replacement: "\\text{ $0 }$1", options: "mA"},
