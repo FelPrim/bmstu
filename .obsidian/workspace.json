@@ -4,51 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9935b76534a223ac",
+        "id": "de6de001f70611f6",
         "type": "tabs",
         "children": [
           {
-            "id": "a43d5ef0b6fa06f9",
+            "id": "95b1510435673e7e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/ПТП.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ПТП"
-            }
-          },
-          {
-            "id": "73963d53c6b3b93f",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.8.10"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.8.10"
-            }
-          },
-          {
-            "id": "878fb8c9daca6bfb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Семинары"
+              "title": "Новая вкладка"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,18 +166,37 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "878fb8c9daca6bfb",
+  "active": "740ed460648d1a84",
   "lastOpenFiles": [
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
+    "Untitled.md",
+    "Untitled 5.md",
+    "Untitled 4.md",
+    "Untitled 3.md",
+    "Untitled 1.md",
+    "Markdown/4 семестр/Физика/Семинары.md",
+    "Markdown/4 семестр/Физика/Лекции.md",
+    "Markdown/4 семестр/Физика/Домашнее задание 2.md",
+    "PDF/4 семестр/Физика/Домашнее задание 2.pdf",
+    "Markdown/4 семестр/Физика/Домашнее задание 1.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
+    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.md",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
+    "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
+    "Markdown/4 семестр/Теоретическая механика/Семинары.md",
+    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
+    "Markdown/4 семестр/Операционные системы/Семинары.md",
+    "Markdown/4 семестр/Операционные системы/Лекции.md",
     "Markdown/4 семестр/Операционные системы/Занятие ОС 12032025.md",
+    "Markdown/4 семестр/ПТП.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
     "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
     "obsidian stuff/attachments/Pasted image 20250429144236.png",
     "obsidian stuff/attachments/Pasted image 20250429135646.png",
-    "Untitled 5.md",
-    "Untitled 4.md",
     "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md",
-    "Markdown/4 семестр/Операционные системы/Лекции.md",
-    "Markdown/4 семестр/Английский/Просто записи.md",
     "задания/Дифгем/Screenshot_2025-04-28_13-26-31.png",
     "задания/Дифгем/photo_2025-04-28_13-22-44.jpg",
     "задания/Дифгем",
@@ -218,16 +206,6 @@
     "obsidian stuff/attachments/Pasted image 20250428182202.png",
     "obsidian stuff/attachments/Pasted image 20250428175436.png",
     "obsidian stuff/attachments/Pasted image 20250428172519.png",
-    "Untitled 3.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 3.md",
-    "Без названия.md",
-    "Markdown/4 семестр/Физика/Домашнее задание 2.md",
-    "Markdown/4 семестр/Операционные системы/код из гитлаба.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
-    "result/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
-    "Untitled.md",
-    "Untitled 2.md",
-    "Untitled 1.md",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/vim",
     "задания/Термех ДЗ1.pdf",
     "задания/Термех ДЗ3.pdf",
@@ -235,15 +213,6 @@
     "books/Термех ДЗ3.pdf",
     "books/Термех ДЗ3.pdf.crdownload",
     "books/Термех ДЗ2.pdf",
-    "books/Термех ДЗ2.pdf.crdownload",
-    "books/Термех ДЗ1.pdf",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 1.md",
-    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
-    "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
-    "Markdown/4 семестр/Физика/Семинары.md",
-    "Markdown/4 семестр/ПТП.md"
+    "books/Термех ДЗ2.pdf.crdownload"
   ]
 }
