@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown/4 семестр/Английский/Просто записи.md",
+                "file": "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Просто записи"
+              "title": "ДЗ 2"
             }
           }
         ],
@@ -199,6 +199,9 @@
   },
   "active": "878fb8c9daca6bfb",
   "lastOpenFiles": [
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md",
+    "Markdown/4 семестр/Операционные системы/Лекции.md",
+    "Markdown/4 семестр/Английский/Просто записи.md",
     "задания/Дифгем/Screenshot_2025-04-28_13-26-31.png",
     "задания/Дифгем/photo_2025-04-28_13-22-44.jpg",
     "задания/Дифгем",
@@ -210,7 +213,6 @@
     "obsidian stuff/attachments/Pasted image 20250428172519.png",
     "obsidian stuff/attachments/Pasted image 20250428172341.png",
     "obsidian stuff/attachments/Pasted image 20250428171705.png",
-    "obsidian stuff/attachments/Pasted image 20250428143102.png",
     "Untitled 3.md",
     "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 3.md",
     "Без названия.md",
@@ -242,8 +244,6 @@
     "Markdown/4 семестр/ПТП.md",
     "Markdown/4 семестр/Курсовая.md",
     "Markdown/test.md",
-    "Markdown/Допы.md",
-    "Markdown/4 семестр/Физика/Лекции.md",
-    "Markdown/4 семестр/Физика/Домашнее задание 1.md"
+    "Markdown/Допы.md"
   ]
 }
