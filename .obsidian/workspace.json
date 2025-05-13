@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown/4 семестр/Теоретическая механика/Семинары.md",
+                "file": "Markdown/4 семестр/Английский/Просто записи.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Семинары"
+              "title": "Просто записи"
             }
           },
           {
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "40b4c3f1c0f0a61e",
@@ -186,8 +187,8 @@
   },
   "active": "70d85ee4eed53840",
   "lastOpenFiles": [
-    "Без названия 1.md",
     "Markdown/4 семестр/Теоретическая механика/Семинары.md",
+    "Без названия 1.md",
     "obsidian stuff/attachments/Pasted image 20250513055619.png",
     "obsidian stuff/attachments/Pasted image 20250513054932.png",
     "obsidian stuff/attachments/Pasted image 20250513050807.png",
