@@ -10,7 +10,7 @@
   "loadSnippetVariablesFromFile": false,
   "snippetsFileLocation": "obsidian stuff/for latex suite.txt",
   "snippetVariablesFileLocation": "",
-  "concealEnabled": false,
+  "concealEnabled": true,
   "concealRevealTimeout": 0,
   "colorPairedBracketsEnabled": true,
   "highlightCursorBracketsEnabled": true,
