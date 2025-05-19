@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "f8e1587feb9134cd",
+        "id": "040ab6b697c3ed79",
         "type": "tabs",
         "children": [
           {
-            "id": "beca804e9d70e5fc",
+            "id": "956bd90347009a8c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "ДЗ 2"
+              "title": "New tab"
             }
           }
         ]
@@ -170,12 +166,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "beca804e9d70e5fc",
+  "active": "956bd90347009a8c",
   "lastOpenFiles": [
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 3.md",
+    "obsidian stuff/for latex suite.txt~",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
     "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
     "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
-    "obsidian stuff/for latex suite.txt~",
     "Markdown/4 семестр/Физика/Домашнее задание 2.md",
     "задания/Физика ДЗ_ФН_Варианты. Семестр 1.pdf",
     "obsidian stuff/attachments/Pasted image 20250517121906.png",
@@ -213,7 +210,6 @@
     "Markdown/4 семестр/Теоретическая механика/ДЗ 2.md",
     "Markdown/4 семестр/Операционные системы/Лекции.md",
     "Markdown/4 семестр/Английский/Просто записи.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 3.md",
     "obsidian stuff/Untitled.md",
     "Untitled.md",
     "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md"
