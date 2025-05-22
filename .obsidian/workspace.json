@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "040ab6b697c3ed79",
+        "id": "f59b580c920f4d3e",
         "type": "tabs",
         "children": [
           {
-            "id": "956bd90347009a8c",
+            "id": "990eafc4bf615d88",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/Операционные системы/Семинары.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Семинары"
             }
           }
         ]
@@ -166,13 +170,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "956bd90347009a8c",
+  "active": "990eafc4bf615d88",
   "lastOpenFiles": [
+    "Markdown/4 семестр/Операционные системы/Лекции.md",
+    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
+    "Markdown/4 семестр/Теоретическая механика/Семинары.md",
+    "obsidian stuff/attachments/Pasted image 20250520144146.png",
+    "obsidian stuff/attachments/Pasted image 20250520140544.png",
+    "Markdown/4 семестр/Операционные системы/Семинары.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
     "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 3.md",
     "obsidian stuff/for latex suite.txt~",
     "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
     "Markdown/4 семестр/Физика/Домашнее задание 2.md",
     "задания/Физика ДЗ_ФН_Варианты. Семестр 1.pdf",
     "obsidian stuff/attachments/Pasted image 20250517121906.png",
@@ -183,10 +193,8 @@
     "задания/РК_2_ФН_Вопросы_по_Электромагнетизму.pdf",
     "задания/РК_1_ФН_Теорвопросы. Механика и ТД.pdf",
     "obsidian stuff/attachments/Pasted image 20250515173207.png",
-    "Markdown/4 семестр/Теоретическая механика/Семинары.md",
     "задания/лабы/мб моя 3 лаба - мт1.pdf",
     "задания/лабы/мб моя 3 лаба - мт1.pdf.crdownload",
-    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
     "задания/лабы/5 лаба - э3.pdf",
@@ -200,18 +208,14 @@
     "obsidian stuff/attachments/Pasted image 20250515150906.png",
     "obsidian stuff/attachments/Pasted image 20250515150855.png",
     "obsidian stuff/attachments/Pasted image 20250515150845.png",
-    "obsidian stuff/attachments/Pasted image 20250515150835.png",
-    "obsidian stuff/attachments/Pasted image 20250515150824.png",
     "задания/лабы/4 лаба - э2.pdf.crdownload",
     "Markdown/4 семестр/Теоретическая механика/ДЗ 3.md",
     "Untitled 1.md",
     "Без названия.md",
     "Markdown/4 семестр/Теоретическая механика/ДЗ 1.md",
     "Markdown/4 семестр/Теоретическая механика/ДЗ 2.md",
-    "Markdown/4 семестр/Операционные системы/Лекции.md",
     "Markdown/4 семестр/Английский/Просто записи.md",
     "obsidian stuff/Untitled.md",
-    "Untitled.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md"
+    "Untitled.md"
   ]
 }
