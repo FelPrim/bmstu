@@ -4,20 +4,51 @@
     "type": "split",
     "children": [
       {
-        "id": "41908f2485e60e38",
+        "id": "9dfd803b65819781",
         "type": "tabs",
         "children": [
           {
-            "id": "2b43b19c9c383637",
+            "id": "038f49a356565c99",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "image",
+              "state": {
+                "file": "задания/Дифгем/2.jpg"
+              },
+              "icon": "lucide-image",
+              "title": "2"
+            }
+          },
+          {
+            "id": "a7f5657392184987",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/Курсовая.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "Курсовая"
+            }
+          },
+          {
+            "id": "1d6d226247468fb4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Лекции"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,53 +197,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2b43b19c9c383637",
+  "active": "a7f5657392184987",
   "lastOpenFiles": [
+    "задания/Курсовая ГОСТ.pdf",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
+    "задания/Дифгем/2.jpg",
+    "задания/Дифгем/4.jpg",
+    "задания/Дифгем/5.jpg",
+    "задания/Дифгем/6.jpg",
+    "задания/Дифгем/7.jpg",
+    "задания/Дифгем/8.jpg",
+    "задания/Дифгем/1.jpg",
+    "задания/Дифгем/3.jpg",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
+    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
+    "PDF/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.pdf",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 3.md",
+    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ.md",
+    "Markdown/4 семестр/Теоретическая механика/ДЗ 2.md",
+    "Markdown/4 семестр/Теоретическая механика/ДЗ 3.md",
+    "Без названия.md",
+    "задания/лабы/мб моя 3 лаба - мт1.pdf",
+    "задания/лабы/6 лаба - О24.md",
+    "задания/лабы/5 лаба - э3.pdf",
+    "задания/лабы/4 лаба - э2.pdf",
+    "задания/лабы/3 лаба - тзан.pdf",
+    "задания/лабы/2 лаба - m104.md",
+    "задания/лабы/1 лаба - m1.pdf",
+    "задания/лабы",
+    "задания/РК_2_ФН_Вопросы_по_Электромагнетизму.pdf",
+    "задания/РК_1_ФН_Теорвопросы. Механика и ТД.pdf",
+    "obsidian stuff/attachments/Pasted image 20250515173207.png",
+    "obsidian stuff/attachments/Pasted image 20250515150936.png",
+    "Markdown/4 семестр/Физика/РК1.md",
     "Markdown/4 семестр/Английский/Просто записи.md",
     "Markdown/4 семестр/Теоретическая механика/Семинары.md",
     "Без названия 1.md",
-    "obsidian stuff/attachments/Pasted image 20250513055619.png",
-    "obsidian stuff/attachments/Pasted image 20250513054932.png",
-    "obsidian stuff/attachments/Pasted image 20250513050807.png",
-    "obsidian stuff/attachments/Pasted image 20250513050537.png",
-    "obsidian stuff/attachments/Pasted image 20250513050204.png",
-    "obsidian stuff/attachments/Pasted image 20250513050145.png",
-    "obsidian stuff/attachments/Pasted image 20250513050134.png",
-    "obsidian stuff/attachments/Pasted image 20250512153127.png",
-    "obsidian stuff/attachments/Pasted image 20250512152021.png",
     "Untitled 1.md",
-    "Markdown/4 семестр/Теоретическая механика/ДЗ 3.md",
-    "Markdown/4 семестр/Теоретическая механика/ДЗ 2.md",
     "Markdown/4 семестр/Теоретическая механика/ДЗ 1.md",
-    "Markdown/4 семестр/Теоретическая механика/Лекции.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.md",
-    "Без названия.md",
-    "obsidian stuff/attachments/Pasted image 20250505191807.png",
     "Untitled.md",
     "Markdown/4 семестр/Операционные системы/Лекции.md",
     "Markdown/4 семестр/Операционные системы/Семинары.md",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Семинары.md",
     "Markdown/4 семестр/Курсовая.md",
     "задания/~$е задание.docx",
-    "задания/Курсовая ГОСТ.pdf",
-    "задания/Курсовая ГОСТ.pdf.crdownload",
-    "задания/Мое задание.docx",
-    "задания/Правильное_оформление_задания_на_курсовую_работу_43_Весна_2025.docx",
-    "result/ПТП.docx",
-    "result/Приходько_ФН11_43Б_практика_манипула2.docx",
-    "задания/Задание_к_курсовой_работе_по_ДУ_2025.doc",
-    "books/Курсовая Dinamicheskie_modeli_v_economike.pdf",
-    "books/Dinamicheskie_modeli_v_economike.pdf",
-    "Markdown/4 семестр/Дифференциальная геометрия и тензорное счисление/Лекции.md",
     "Untitled 5.md",
     "Untitled 4.md",
     "Untitled 3.md",
-    "Markdown/4 семестр/Физика/Семинары.md",
-    "Markdown/4 семестр/Физика/Лекции.md",
-    "Markdown/4 семестр/Физика/Домашнее задание 2.md",
-    "Markdown/4 семестр/Физика/Домашнее задание 1.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
-    "Markdown/4 семестр/ТФКП и операционное исчисление/Домашнее задание 2.md"
+    "Markdown/4 семестр/Физика/Семинары.md"
   ]
 }
