@@ -3,6 +3,7 @@
 	{trigger: "mk", replacement: "$$0$", options: "tA"},
 	{trigger: "dm", replacement: "$$\n$0\n$$", options: "tAw"},
 	{trigger: "beg", replacement: "\\begin{$0}\n$1\n\\end{$0}", options: "mA"},
+	{trigger: "bbb", replacement: "\\begin{gather}\n$0\n\\end{gather}", options: "mA"},
     {trigger: "bbeg", replacement: "\\begin{align}\n& $0\n\\end{align}", options: "mA"},
     {trigger: "~~", replacement: "\\sim $0", options: "mA"},
     {trigger: "\\(", replacement: "\\left( $0 \\right) $1", options: "mA"},
