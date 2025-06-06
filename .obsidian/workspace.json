@@ -13,12 +13,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown/4 семестр/Физика/РК1.md",
+                "file": "Markdown/4 семестр/Физика/РК2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "РК1"
+              "title": "РК2"
+            }
+          },
+          {
+            "id": "2144a56e8e5690cf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/Физика/Лекции.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Лекции"
+            }
+          },
+          {
+            "id": "10c7af78992a5d0a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Markdown/4 семестр/Физика/Семинары.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Семинары"
             }
           }
         ]
@@ -172,17 +200,22 @@
   },
   "active": "087ec1a1872e7ade",
   "lastOpenFiles": [
-    "obsidian stuff/attachments/Pasted image 20250606094705.png",
-    "obsidian stuff/attachments/Pasted image 20250606094636.png",
-    "obsidian stuff/attachments/Pasted image 20250606094625.png",
-    "obsidian stuff/attachments/Pasted image 20250606094611.png",
-    "obsidian stuff/attachments/Pasted image 20250606094555.png",
-    "obsidian stuff/attachments/Pasted image 20250606094526.png",
-    "obsidian stuff/attachments/Pasted image 20250606094516.png",
-    "obsidian stuff/attachments/Pasted image 20250606094509.png",
-    "obsidian stuff/attachments/Pasted image 20250606094502.png",
-    "obsidian stuff/attachments/Pasted image 20250606094456.png",
-    "obsidian stuff/attachments/Pasted image 20250606094449.png",
+    "Markdown/4 семестр/Физика/Семинары.md",
+    "Markdown/4 семестр/Физика/РК2.md",
+    "Markdown/4 семестр/Физика/Лекции.md",
+    "obsidian stuff/attachments/Pasted image 20250606145854.png",
+    "obsidian stuff/attachments/Pasted image 20250606145518.png",
+    "obsidian stuff/attachments/Pasted image 20250606145454.png",
+    "obsidian stuff/attachments/Pasted image 20250606145439.png",
+    "books/Физика SAVELEV2.pdf",
+    "books/Физика SAVELEV2.pdf.crdownload",
+    "obsidian stuff/attachments/Pasted image 20250606145207.png",
+    "obsidian stuff/attachments/Pasted image 20250606145035.png",
+    "obsidian stuff/attachments/Pasted image 20250606141425.png",
+    "obsidian stuff/attachments/Pasted image 20250606141344.png",
+    "obsidian stuff/attachments/Pasted image 20250606141304.png",
+    "obsidian stuff/attachments/Pasted image 20250606141246.png",
+    "Markdown/4 семестр/Физика/РК1.md",
     "books/Физика SAVELEV.pdf",
     "books/Физика SAVELEV.pdf.crdownload",
     "Markdown/4 семестр/Курсовая.md",
