@@ -11,10 +11,14 @@
             "id": "4da153683802afaf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Без названия 1.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "Без названия 1"
             }
           }
         ]
@@ -168,6 +172,8 @@
   },
   "active": "4da153683802afaf",
   "lastOpenFiles": [
+    "Markdown/4 семестр/Курсовая.md",
+    "Без названия 1.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
     "Без названия.md",
@@ -176,7 +182,6 @@
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Домашнее задание.md",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Лекции.md",
     "Markdown/4 семестр/Теория вероятности и математическая статистика/Семинары.md",
-    "Markdown/4 семестр/Курсовая.md",
     "задания/Термех ДЗ4.pdf",
     "obsidian stuff/attachments/Pasted image 20250527141431.png",
     "obsidian stuff/attachments/Pasted image 20250527141422.png",
