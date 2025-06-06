@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9c24e9142dd8fda1",
+        "id": "160267ed7664dc6e",
         "type": "tabs",
         "children": [
           {
-            "id": "4da153683802afaf",
+            "id": "087ec1a1872e7ade",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Markdown/4 семестр/Курсовая.md",
+                "file": "Markdown/4 семестр/Физика/РК1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Курсовая"
+              "title": "РК1"
             }
           }
         ]
@@ -170,12 +170,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4da153683802afaf",
+  "active": "8637ab6b5d46fb0b",
   "lastOpenFiles": [
+    "books/Физика SAVELEV.pdf",
+    "books/Физика SAVELEV.pdf.crdownload",
+    "Markdown/4 семестр/Курсовая.md",
     "Без названия.md",
     "PDF/4 семестр/Дифференциальная геометрия и тензорное счисление/ДЗ 2.pdf",
     "Без названия 1.md",
-    "Markdown/4 семестр/Курсовая.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Семинары.md",
     "Markdown/4 семестр/ТФКП и операционное исчисление/Лекции.md",
     "obsidian stuff/attachments/Pasted image 20250604202930.png",
