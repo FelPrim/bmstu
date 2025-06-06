@@ -180,6 +180,7 @@
 	{trigger: "->", replacement: "\\to ", options: "mA"},
 	{trigger: "!>", replacement: "\\mapsto", options: "mA"},
     {trigger: "=>", replacement: "\\Rightarrow ", options: "mA"},
+    {trigger: ":=", replacement: "\\doteqdot ", options: "mA"},
 	{trigger: "=<", replacement: "\\Leftarrow ", options: "mA"},
     {trigger: "==>", replacement: "\\implies ", options: "mA"},
     {trigger: "\\leq =", replacement: "\\impliedby ", options: "mA", priority: 1},
