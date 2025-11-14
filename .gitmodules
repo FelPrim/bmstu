@@ -1,0 +1,3 @@
+[submodule "компгем/Computer-Geometry"]
+	path = компгем/Computer-Geometry
+	url = https://github.com/anzakhar/Computer-Geometry.git
