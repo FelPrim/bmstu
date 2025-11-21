@@ -63,13 +63,13 @@
  * После этого сравнить абсолютную погрешность в решении получившейся СЛАУ с абсолютной погрешностью в решении приближённой СЛАУ
  * */
 typedef struct Matrix{
-	alignas(32) double * restrict data;
+	double * data;
 	const unsigned short rows;
 	const unsigned short columns;
 } Matrix;
 
 typedef struct Vector{
-	alignas(32) double * restrict data;
+	double * data;
 	const unsigned short length;
 } Vector;
 
@@ -111,46 +111,14 @@ double norm(const Vector vector){
 	return sqrt(result);
 }
 
-typedef struct MinorStruct{
-	Matrix matrix;
-	const unsigned short row;
-	const unsigned short column;
-} MinorStruct;
-
 inline static double xifaelsey(double x, double y, int a, int b){
 	int equal = a == b;
 	return equal*x+(1-equal)*y;
 }
 
-double minor(const MinorStruct input);
-double minor(const MinorStruct input){
 
-	switch (input.matrix.rows){
-		case 0:
-		case 1:
-			return 0;
-		case 2:
-			return input.matrix.data[3 - input.column - 2*input.row];
-		case 3:
-			int i0 = input.row != 0;
-			int i1 = input.row != 1;
-			int i2 = input.row != 2;
-			int j0 = input.column != 0;
-			int j1 = input.column != 1;
-			int j2 = input.column != 2;
-			int a11 = 4 - j0 - 3*i0;
-			int a12 = 4 + j2 - 3*i0;
-			int a21 = 4 - j0 + 3*i2;
-			int a22 = 4 + j2 + 3*i2;
-			return input.matrix.data[a11] * input.matrix.data[a22]
-			     - input.matrix.data[a12] * input.matrix.data[a21];
-		default:
-			// TODO
-			exit(-1);
-	}	
-}
 
-double determinant(const Matrix matrix){
+inline static double _determinant(const Matrix matrix){
 	assert(matrix.rows < 4);
 	switch (matrix.rows){
 		case 1:
@@ -167,9 +135,267 @@ double determinant(const Matrix matrix){
 				  -	matrix.data[0]*matrix.data[5]*matrix.data[7];
 		default:
 			//TODO
-			//exit(-1);
+			exit(-1);
 	}
 	
+}
+
+typedef struct GapeMatrix{
+	Matrix matrix;
+	unsigned short *rows;
+	unsigned short count; // from 0 to SHORT_MAX
+} GapeMatrix;
+
+inline static unsigned short find_index(const unsigned short *sorted_array, unsigned short length, unsigned short elem){
+	unsigned short left = 0, right = length - 1;
+	unsigned short mid;
+	while (left <= right){
+		mid = left + (right - left)/2;
+		if (sorted_array[mid] == elem){
+			return length;
+		}
+		if (sorted_array[mid] < elem)
+			left = mid + 1;
+		else
+			right = mid;
+	}
+	return left;
+}
+
+double recursive_determinant(const GapeMatrix);
+double recursive_determinant(const GapeMatrix gape){
+	puts("@");
+	switch (gape.count){
+		case 0:
+		case 0x8000:
+			exit(-1);
+		case 0x8001:{
+			// 0 0 0 0 0
+			// 0 0 0 0 X
+			// 0 0 0 0 0
+			// 0 0 0 0 0
+			// 0 0 0 0 0
+			const int a11 =  gape.matrix.columns - 1 + gape.rows[0] * gape.matrix.columns;
+			return gape.matrix.data[a11];}
+		case 0x8002:{
+			// 0 0 0 0 0 
+			// 0 0 0 A B
+			// 0 0 0 0 0
+			// 0 0 0 0 0
+			// 0 0 0 C D
+			const int a11 = gape.matrix.columns - 2 + gape.rows[0] * gape.matrix.columns;
+			const int a12 = gape.matrix.columns - 1 + gape.rows[0] * gape.matrix.columns;
+			const int a21 = gape.matrix.columns - 2 + gape.rows[1] * gape.matrix.columns;
+			const int a22 = gape.matrix.columns - 1 + gape.rows[1] * gape.matrix.columns;
+			return 	  gape.matrix.data[a11] * gape.matrix.data[a22] 
+				- gape.matrix.data[a12] * gape.matrix.data[a21];}
+		case 0x8003:{
+			// 0 0 A B C
+			// 0 0 0 0 0
+			// 0 0 D E F
+			// 0 0 G H I
+			// 0 0 0 0 0
+			const int a11 = gape.matrix.columns - 3 + gape.rows[0] * gape.matrix.columns;
+			const int a12 = gape.matrix.columns - 2 + gape.rows[0] * gape.matrix.columns;
+			const int a13 = gape.matrix.columns - 1 + gape.rows[0] * gape.matrix.columns;
+			const int a21 = gape.matrix.columns - 3 + gape.rows[1] * gape.matrix.columns;
+			const int a22 = gape.matrix.columns - 2 + gape.rows[1] * gape.matrix.columns;
+			const int a23 = gape.matrix.columns - 1 + gape.rows[1] * gape.matrix.columns;
+			const int a31 = gape.matrix.columns - 3 + gape.rows[2] * gape.matrix.columns;
+			const int a32 = gape.matrix.columns - 2 + gape.rows[2] * gape.matrix.columns;
+			const int a33 = gape.matrix.columns - 1 + gape.rows[2] * gape.matrix.columns;
+			return    gape.matrix.data[a11] * gape.matrix.data[a22] * gape.matrix.data[a33]
+				+ gape.matrix.data[a12] * gape.matrix.data[a23] * gape.matrix.data[a31]
+				+ gape.matrix.data[a13] * gape.matrix.data[a21] * gape.matrix.data[a32]
+				- gape.matrix.data[a13] * gape.matrix.data[a22] * gape.matrix.data[a31]
+				- gape.matrix.data[a12] * gape.matrix.data[a21] * gape.matrix.data[a33]
+				- gape.matrix.data[a11] * gape.matrix.data[a23] * gape.matrix.data[a32];}
+		default:
+			const unsigned short is_remaining = 0x8000 & gape.count;
+			unsigned short real_count;
+			if (is_remaining)
+				real_count = gape.count ^ 0x8000;
+			else
+				real_count = gape.count;
+			double result = 0;
+			int sign = 1;
+			if (!is_remaining){
+				const unsigned short remaining  = gape.matrix.columns - real_count;
+				if (remaining > real_count + 1 && remaining > 3){
+					// 0 A B C D E
+					// 0 0 0 0 0 0
+					// 0 F G H I J
+					// 0 K L M N O
+					// 0 P Q R S T
+					// 0 U V W X Y
+					// [1]
+
+					unsigned short new_rows[real_count + 1];
+					for (unsigned short i = 0; i < gape.matrix.columns; ++i){
+						unsigned short index = find_index(gape.rows, real_count, i);
+						if (index == real_count)
+							// index был в массиве
+							continue;
+						unsigned short offset = 0;
+						for (unsigned short j = 0; j < real_count; ++j){
+							if (j == index){
+								new_rows[j] = i; 
+								++offset;
+								continue;
+							}
+							new_rows[j] = gape.rows[j+offset];
+						}
+						GapeMatrix tmp = {
+							.matrix = gape.matrix,
+							.rows = new_rows,
+							.count = real_count+1
+						};
+						result += sign * recursive_determinant(tmp);
+						sign = -sign;
+					}
+				}
+				else{
+					// 0 0 0 A B C C2     0 A B C
+					// 0 0 0 0 0 0 0      0 0 0 0
+					// 0 0 0 D E F F2 или 0 D E F
+					// 0 0 0 G H I I2     0 G H I
+					// 0 0 0 0 0 0 0
+					// 0 0 0 J K L M
+					// 0 0 0 0 0 0 0 	 
+					// меняем то, как храним массив: [157] -> [0346]
+					unsigned short cur_rows[remaining];
+					unsigned short j = 0;
+					for (unsigned short i = 0; i < gape.matrix.columns; ++i){
+						unsigned short index = find_index(gape.rows, real_count, i);
+						if (index == real_count){
+							cur_rows[j++] = i;
+						}
+					}
+					unsigned short new_rows[remaining-1];
+					for (unsigned short i = 0; i < remaining; ++i){
+						unsigned short index = cur_rows[i];
+						sign = index % 2;
+						unsigned short offset = 0;
+						for (unsigned short j = remaining; j > 0; ++j){
+							if (j == index){
+								++offset;
+								continue;
+							}
+							new_rows[j+offset] = cur_rows[j];
+						}
+						GapeMatrix tmp = {
+							.matrix = gape.matrix,
+							.rows = new_rows,
+							.count = (remaining-1) | 0x8000
+						};
+						result += sign * recursive_determinant(tmp);
+					}
+				}
+			}
+			else{
+				unsigned short new_rows[real_count-1];
+				for (unsigned short i = 0; i < real_count; ++i){
+					unsigned short index = gape.rows[i];
+					sign = index % 2;
+					unsigned short offset = 0;
+					for (unsigned short j = real_count; j > 0; ++j){
+						if (j == index){
+							++offset;
+							continue;
+						}
+						new_rows[j+offset] = gape.rows[j];						
+					}
+					GapeMatrix tmp = {
+						.matrix = gape.matrix,
+						.rows = new_rows,
+						.count = (real_count-1) | 0x8000
+					};
+					result += sign * recursive_determinant(tmp);
+
+				}
+			}
+
+			return result;
+		
+	}
+
+}
+
+double determinant(const Matrix matrix){
+	if (matrix.columns < 4)
+		return _determinant(matrix);
+	if (matrix.columns == 4){
+		unsigned short arr[3] = {1, 2, 3};	
+		GapeMatrix tmp = {
+			.matrix = matrix,
+			.rows = arr,
+			.count = 0x8003
+		};
+		double result = recursive_determinant(tmp);
+		tmp.rows[0] = 0;
+		result += -recursive_determinant(tmp);
+		tmp.rows[1] = 1;
+		result += recursive_determinant(tmp);
+		tmp.rows[2] = 2;
+		result += -recursive_determinant(tmp);
+		return result;
+	}
+	double result = 0;
+	int sign = 1;
+	for (unsigned short i = 0; i < matrix.columns; ++i){
+		GapeMatrix tmp = {
+			.matrix = matrix,
+			.rows = &i,
+			.count = 1
+		};
+		result += recursive_determinant(tmp);
+		sign = -sign;
+	}
+	return result;
+		
+}
+
+typedef struct MinorStruct{
+	Matrix matrix;                  
+	const unsigned short row;       
+	const unsigned short column;   
+} MinorStruct;
+
+double minor(const MinorStruct input){
+	unsigned short n = input.matrix.rows;
+	if (n == 0) return 1.0; 
+	if (n == 1) return 1.0;
+
+	if (input.matrix.rows != input.matrix.columns){
+		fprintf(stderr, "minor: matrix must be square\n");
+		exit(-1);
+	}
+
+	unsigned short m = n - 1;
+
+	double *sub = (double*)malloc(sizeof(double) * (size_t)m * (size_t)m);
+	if (!sub){
+		fprintf(stderr, "minor: malloc failed\n");
+		exit(-1);
+	}
+
+	unsigned short si = 0;
+	for (unsigned short i = 0; i < n; ++i){
+		if (i == input.row) continue;
+		unsigned short sj = 0;
+		for (unsigned short j = 0; j < n; ++j){
+			if (j == input.column) continue;
+			sub[sj + si * m] = input.matrix.data[j + input.matrix.columns * i];
+			++sj;
+		}
+		++si;
+	}
+
+	Matrix subM = { .data = sub, .rows = m, .columns = m };
+	double det = determinant(subM);
+
+	free(sub);
+	return det;
 }
 
 double cond(const Matrix matrix, const Matrix inversed){
@@ -198,9 +424,8 @@ void check_inverse(const Matrix original, const Matrix inversed){
 }
 
 void inverse(const Matrix original, Matrix result){
-	assert(original.rows < 4);
 	double det = determinant(original);
-	printf("det: %llf\n", det);
+	printf("det: %.15lf\n", det);
 	assert(fabs(det) > EPSILON);
 	int parity = 1;
 	for (unsigned short i = 0; i < result.rows; ++i){
@@ -285,7 +510,7 @@ void Task1(){
 	Matrix Inversed = {.data = imat_coeffs, .rows = 3, .columns = 3};
 	inverse(SLE, Inversed);	
 	double c = cond(SLE, Inversed);
-	printf("cond: %d\n", c);
+	printf("cond: %.15lf\n", c);
 	if (c > 100)
 		puts("SLE is ill conditioned");
 	else
@@ -293,7 +518,7 @@ void Task1(){
 	
 	double norm_Db = norm(Db), norm_b = norm(b);
 	double relative_error = c*norm_Db/norm_b;
-	printf("Relative error: %lf, |b|: %e, |Db|: %e\n", relative_error, norm_b, norm_Db);
+	printf("Relative error: %.15lf, |b|: %.15lf, |Db|: %.15lf\n", relative_error, norm_b, norm_Db);
 	puts("_________________________________________________________________________");
 }
 
@@ -381,9 +606,21 @@ void Task2(){
 	Multiply(lambda, A, Aple);
 	Sum(E, Aple, Aple);
 	Apply(Aple, x, bvec);
-	double c = cond(Aple);
-	printf("cond: %lf\n", c);
+	double I_data[GRID*GRID];
+	Matrix Inversed = {
+		.data = I_data,
+		.rows = GRID,
+		.columns = GRID
+	};
+	inverse(Aple, Inversed);
+	double c = cond(Aple, Inversed);
+	printf("cond: %.15lf\n", c);
+	if (c > 100)
+		puts("SLE is ill conditioned");
+	else
+		puts("SLE is well conditioned");
 	
+
 	double Db_i[GRID];
 	{
 	int sign = 1;
@@ -398,12 +635,26 @@ void Task2(){
 	};
 	double norm_Db = norm(Db), norm_b = norm(bvec);
 	double relative_error = c*norm_Db/norm_b;
-	printf("Relative error: %lf, |b|: %e, |Db|: %e\n", relative_error, norm_b, norm_Db);
+	printf("Relative error: %.15lf, |b|: %.15lf, |Db|: %.15lf\n", relative_error, norm_b, norm_Db);
 	/*
 		найти решение СЛАУ, которая получается делением каждого i-го уравнения на b[i]+Db[i]
 		(E + lambda A) x = b + Db
 		(E + lamdbda A)/(b+Db) x = 1
 	*/
+	for (unsigned short i = 0; i < GRID; ++i)
+		for (unsigned short j = 0; j < GRID; ++j)
+			Aple.data[j + i*GRID] /= bvec.data[i] + Db.data[i];
+	for (unsigned short i = 0; i < GRID; ++i){
+		Db.data[i] /= bvec.data[i] + Db.data[i];
+		bvec.data[i] /= bvec.data[i] + Db.data[i];
+	}
+	inverse(Aple, Inversed);
+	c = cond(Aple, Inversed);
+	printf("cond: %.15lf\n", c);
+	norm_Db = norm(Db);
+	norm_b = norm(bvec);
+	relative_error = c*norm_Db/norm_b;
+	printf("Relative error: %.15lf\n", relative_error);
 	puts("_________________________________________________________________________");
 }
 
