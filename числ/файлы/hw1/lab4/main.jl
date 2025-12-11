@@ -3,14 +3,29 @@ using LinearAlgebra
 using Plots
 using ForwardDiff
 
-function simple_iteration_method(F, g, x=0, maxerror = 0.01, maxcount = 10000)
-    println("F: ")
-    display(F)
-    println("g: ")
-    display(g)
-
+function Jacobi_method(A, alpha, beta, n, maxerror = 0.01, maxcount = 10000)
+    println("A: ")
+    display(A)
+    println("alpha: $alpha, beta: $beta, n: $n")
     Matrix_size = size(F)
-    Vector_size = size(g, 1)
+    @assert beta < n
+    @assert alpha < beta
+    @assert n == Matrix_size[1]
+    @assert n == Matrix_size[2]
+    @assert n >= 3
+    
+    # A[beta][alpha] = max
+    # Q = (cos 0 -sin 0)
+    #     (0   1    0 0)
+    #     (sin 0  cos 0)
+    #     (0   0    0 1)
+    # varphi: компонента b^alpha_beta матрицы B = (b^i_j) = ^T Q(alpha, beta, varphi)*A[0]*Q(alpha, beta, varphi)=A[1] нулевая
+    # b_alpha^alpha = A_a^a cos^2 varphi + A_b^b sin^2 varphi + 2 A_beta^alpha sin varphi cos varphi
+    # b_b^b = a_a^a sin^2 f + a^b_b cos^2 f - 2 a^a_b sin f cos f
+    # 0 = b^a_b = b^b_a = -(a^a_a - a^b_b) cin f cos f + a^a_b (cos^2 f - sin^2 f)
+    # b^a_k = a^a_k cos f + a^b_k sin f
+    # b^k_b = -a^k_a sin f + a^k_b cos f
+    # b^k_m - a^k_m
     if Matrix_size[1] != Vector_size || Matrix_size[1] != Matrix_size[2] 
         error("Размерности не совпадают")
     end
@@ -339,7 +354,7 @@ function divide_et_vince(f, a, b, maxerror, maxcount = 1000)
         end
         x = (upper + bottom)/2
         counter += 1
-        error_k = (upper-bottom)/2
+        error_k = abs(f(x))
         println("Итер: $(counter), погрешность: $(error_k)")
         if counter % 10 == 0
             @assert sign(f(upper)) != sign(f(bottom)) "Если f(a)*f(b)>=0, то метод не применим"
