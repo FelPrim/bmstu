@@ -1,0 +1,605 @@
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %.unbox34.pre = load i64, ptr inttoptr (i64 139742497580304 to ptr), align 8, !tbaa !35, !alias.scope !33, !noalias !34
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc nonnull ptr @julia_print_to_string_11040(ptr noundef nonnull %\"xs[1]::String\", double %\"xs[2]::Float64\", ptr noundef nonnull %\"xs[3]::String\") unnamed_addr {\nL20:\n  %\"new::Tuple33\" = alloca [1 x i64], align 8\n  %sizeof59 = load i64, ptr %\"xs[1]::String\", align 8, !tbaa !2, !range !6, !alias.scope !7, !noalias !10\n  %0 = call ptr @gpu_gc_pool_alloc(i64 24)\n  store atomic ptr %\"xs[1]::String\", ptr %0 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %1 = getelementptr inbounds i8, ptr %0, i64 8\n  store double %\"xs[2]::Float64\", ptr %1, align 8, !tbaa !21, !alias.scope !22, !noalias !23\n  %2 = getelement" ⋯ 71 bytes ⋯ "r %2 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %getfield = call ptr @ijl_get_nth_field_checked(ptr nonnull %0, i64 1)\n  %getfield.tag_addr = getelementptr inbounds i64, ptr %getfield, i64 -1\n  %getfield.tag = load atomic volatile i64, ptr %getfield.tag_addr unordered, align 8, !tbaa !24, !range !26\n  %3 = and i64 %getfield.tag, -16\n  %4 = inttoptr i64 %3 to ptr\n  %5 = icmp eq ptr inttoptr (i64 139742555047616 to ptr), %4\n  br i1 %5, label %L20.1, label %post_isa56.1\n\nL55:                                              ; preds = %post_isa56.2, %L20.1\n  %value_phi2.2 = phi i64 [ %sizeof59.2, %post_isa56.2 ], [ 20, %L20.1 ]"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store ptr inttoptr (i64 139742562958576 to ptr), ptr %3, align 8
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc i64 @julia_ndigits0z_10961(i64 signext %\"x::Int64\", i64 signext %\"b::Int64\") unnamed_addr {\ntop:\n  %jlcallframe6 = alloca [2 x ptr], align 8\n  %0 = icmp sgt i64 %\"b::Int64\", -2\n  br i1 %0, label %L24, label %L4.preheader\n\nL4.preheader:                                     ; preds = %top\n  %.not2 = icmp eq i64 %\"x::Int64\", 0\n  br i1 %.not2, label %common.ret, label %pass\n\ncommon.ret:                                       ; preds = %pass, %L26, %L4.preheader\n  %common.ret.op = phi i64 [ %2, %L26 ], [ 0, %L4.preheader ], [ %12, %pass ]\n  ret i64 %common.ret.op\n\nL24:                                              ; preds = %top\n  %1 = icmp slt i64 %\"b::Int64\", 2\n  br i1 %1, label %L28, label %L26\n\nL26:                                              ; preds = %L24\n  %2 = call fastcc i64 @julia_ndigits0zpb_10964(i64 signext %\"x::Int64\", i64 signext %\"b::Int64\")"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %.unbox.pre = load i64, ptr inttoptr (i64 139742497580304 to ptr), align 8, !tbaa !21, !alias.scope !19, !noalias !20
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc nonnull ptr @julia_print_to_string_10827(ptr noundef nonnull %\"xs[1]::String\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(16) %\"xs[2]::Tuple\", ptr noundef nonnull %\"xs[3]::String\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(16) %\"xs[4]::Tuple\") unnamed_addr {\ntop:\n  %\"new::Tuple\" = alloca [6 x i64], align 8\n  %\"new::Tuple33\" = alloca [1 x i64], align 8\n  %0 = getelementptr inbounds i8, ptr %\"new::Tuple\", i64 8\n  call void @llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8 dereferenceable(16) %0, ptr noundef nonnull align 8 dereferenceable(16) %\"xs[2]::Tuple\", i64 16, i1 fal" ⋯ 158 bytes ⋯ "ndef nonnull align 8 dereferenceable(16) %\"xs[4]::Tuple\", i64 16, i1 false)\n  br label %L10\n\nL10:                                              ; preds = %post_union_move, %top\n  %tindex_phi = phi i8 [ -128, %top ], [ %31, %post_union_move ]\n  %ptr_phi = phi ptr [ %\"xs[1]::String\", %top ], [ %getfield, %post_union_move ]\n  %value_phi = phi i64 [ 2, %top ], [ %27, %post_union_move ]\n  %value_phi1 = phi i64 [ 0, %top ], [ %3, %post_union_move ]\n  %2 = and i8 %tindex_phi, 127\n  %exactly_isa.not = icmp eq i8 %2, 1\n  br i1 %exactly_isa.not, label %L20, label %post_isa55\n\nL20:                                              ; preds = %post_isa55, %L10"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742476666944 to ptr), ptr %1 release, align 8, !tbaa !2, !alias.scope !8, !noalias !11
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc void @julia_show_delim_array_10896(ptr noundef nonnull align 8 dereferenceable(56) %\"io::GenericIOBuffer\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(16) %\"itr::Tuple\", i32 zeroext %\"op::Char\", i32 zeroext %\"delim::Char\", i32 zeroext %\"cl::Char\", i8 zeroext %\"delim_one::Bool\", i64 signext %\"i1::Int64\", i64 signext %\"n::Int64\") unnamed_addr {\nguard_exit27:\n  %0 = alloca [2 x ptr], align 8\n  call fastcc void @julia_write_10906(ptr %\"io::GenericIOBuffer\", i32 zeroext %\"op::Char\")\n  %1 = call ptr @gpu_gc_pool_alloc(i64 24)\n  store ptr null, ptr %1, align 8, !tbaa !15, !alias.scope !19, !noalias !2" ⋯ 462 bytes ⋯ "tbaa !15, !alias.scope !19, !noalias !20\n  %4 = call ptr @gpu_gc_pool_alloc(i64 16)\n  call void @llvm.memcpy.p0.p0.i64(ptr noundef align 8 dereferenceable(16) %4, ptr noundef nonnull align 8 dereferenceable(16) %\"itr::Tuple\", i64 16, i1 false), !tbaa !21, !alias.scope !45, !noalias !46\n  store atomic ptr %4, ptr %3 release, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %.0.copyload70 = load i64, ptr %\"itr::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %5 = icmp slt i64 %\"i1::Int64\", 2\n  br i1 %5, label %guard_exit42, label %L19\n\nL19:                                              ; preds = %guard_exit32, %guard_exit27"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742392526968 to ptr), ptr %2 release, align 8, !tbaa !2, !alias.scope !8, !noalias !11
+│   name = Symbol("")
+│   file = Symbol("")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc void @julia_show_delim_array_10896(ptr noundef nonnull align 8 dereferenceable(56) %\"io::GenericIOBuffer\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(16) %\"itr::Tuple\", i32 zeroext %\"op::Char\", i32 zeroext %\"delim::Char\", i32 zeroext %\"cl::Char\", i8 zeroext %\"delim_one::Bool\", i64 signext %\"i1::Int64\", i64 signext %\"n::Int64\") unnamed_addr {\nguard_exit27:\n  %0 = alloca [2 x ptr], align 8\n  call fastcc void @julia_write_10906(ptr %\"io::GenericIOBuffer\", i32 zeroext %\"op::Char\")\n  %1 = call ptr @gpu_gc_pool_alloc(i64 24)\n  store ptr null, ptr %1, align 8, !tbaa !15, !alias.scope !19, !noalias !2" ⋯ 462 bytes ⋯ "tbaa !15, !alias.scope !19, !noalias !20\n  %4 = call ptr @gpu_gc_pool_alloc(i64 16)\n  call void @llvm.memcpy.p0.p0.i64(ptr noundef align 8 dereferenceable(16) %4, ptr noundef nonnull align 8 dereferenceable(16) %\"itr::Tuple\", i64 16, i1 false), !tbaa !21, !alias.scope !45, !noalias !46\n  store atomic ptr %4, ptr %3 release, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %.0.copyload70 = load i64, ptr %\"itr::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %5 = icmp slt i64 %\"i1::Int64\", 2\n  br i1 %5, label %guard_exit42, label %L19\n\nL19:                                              ; preds = %guard_exit32, %guard_exit27"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742392473192 to ptr), ptr %9 release, align 8, !tbaa !2, !alias.scope !8, !noalias !11
+│   name = Symbol("")
+│   file = Symbol("")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc void @julia_show_delim_array_10896(ptr noundef nonnull align 8 dereferenceable(56) %\"io::GenericIOBuffer\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(16) %\"itr::Tuple\", i32 zeroext %\"op::Char\", i32 zeroext %\"delim::Char\", i32 zeroext %\"cl::Char\", i8 zeroext %\"delim_one::Bool\", i64 signext %\"i1::Int64\", i64 signext %\"n::Int64\") unnamed_addr {\nguard_exit27:\n  %0 = alloca [2 x ptr], align 8\n  call fastcc void @julia_write_10906(ptr %\"io::GenericIOBuffer\", i32 zeroext %\"op::Char\")\n  %1 = call ptr @gpu_gc_pool_alloc(i64 24)\n  store ptr null, ptr %1, align 8, !tbaa !15, !alias.scope !19, !noalias !2" ⋯ 462 bytes ⋯ "tbaa !15, !alias.scope !19, !noalias !20\n  %4 = call ptr @gpu_gc_pool_alloc(i64 16)\n  call void @llvm.memcpy.p0.p0.i64(ptr noundef align 8 dereferenceable(16) %4, ptr noundef nonnull align 8 dereferenceable(16) %\"itr::Tuple\", i64 16, i1 false), !tbaa !21, !alias.scope !45, !noalias !46\n  store atomic ptr %4, ptr %3 release, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %.0.copyload70 = load i64, ptr %\"itr::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %5 = icmp slt i64 %\"i1::Int64\", 2\n  br i1 %5, label %guard_exit42, label %L19\n\nL19:                                              ; preds = %guard_exit32, %guard_exit27"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742555057776 to ptr), ptr %10 release, align 8, !tbaa !2, !alias.scope !8, !noalias !11
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc void @julia_show_delim_array_10896(ptr noundef nonnull align 8 dereferenceable(56) %\"io::GenericIOBuffer\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(16) %\"itr::Tuple\", i32 zeroext %\"op::Char\", i32 zeroext %\"delim::Char\", i32 zeroext %\"cl::Char\", i8 zeroext %\"delim_one::Bool\", i64 signext %\"i1::Int64\", i64 signext %\"n::Int64\") unnamed_addr {\nguard_exit27:\n  %0 = alloca [2 x ptr], align 8\n  call fastcc void @julia_write_10906(ptr %\"io::GenericIOBuffer\", i32 zeroext %\"op::Char\")\n  %1 = call ptr @gpu_gc_pool_alloc(i64 24)\n  store ptr null, ptr %1, align 8, !tbaa !15, !alias.scope !19, !noalias !2" ⋯ 462 bytes ⋯ "tbaa !15, !alias.scope !19, !noalias !20\n  %4 = call ptr @gpu_gc_pool_alloc(i64 16)\n  call void @llvm.memcpy.p0.p0.i64(ptr noundef align 8 dereferenceable(16) %4, ptr noundef nonnull align 8 dereferenceable(16) %\"itr::Tuple\", i64 16, i1 false), !tbaa !21, !alias.scope !45, !noalias !46\n  store atomic ptr %4, ptr %3 release, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %.0.copyload70 = load i64, ptr %\"itr::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %5 = icmp slt i64 %\"i1::Int64\", 2\n  br i1 %5, label %guard_exit42, label %L19\n\nL19:                                              ; preds = %guard_exit32, %guard_exit27"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store ptr inttoptr (i64 139742563165904 to ptr), ptr %16, align 8
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc nonnull ptr @julia__base_10956(i64 signext %\"base::Int64\", i64 signext %\"x::Int64\", i64 signext %\"pad::Int64\", i8 zeroext %\"neg::Bool\") unnamed_addr {\ntop:\n  %jlcallframe93 = alloca [2 x ptr], align 8\n  %\"base::Int64.fr\" = freeze i64 %\"base::Int64\"\n  %0 = icmp slt i64 %\"x::Int64\", 0\n  %1 = icmp sgt i64 %\"base::Int64.fr\", -1\n  %.not70 = and i1 %1, %0\n  br i1 %.not70, label %L149, label %L5\n\nL5:                                               ; preds = %top\n  %2 = call i64 @llvm.abs.i64(i64 %\"base::Int64.fr\", i1 false)\n  %3 = add i64 %2, -63\n  %narrow = icmp ult i64 %3, -61\n  br i1 %narrow, label %L146, label %L14\n\nL14:                                              ; preds = %L5\n  %4 = icmp ugt i64 %2, 36\n  %5 = select i1 %4, ptr inttoptr (i64 139742553460992 to ptr), ptr inttoptr (i64 139742553461312 to ptr)\n  %6 = call fastcc i64 @julia_ndigits0z_10961(i64 signext %\"x::Int64\", i64 signext %\"base::Int64.fr\")\n  %7 = call i64 @llvm.smax.i64(i64 %6, i64 %\"pad::Int64\")"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store ptr inttoptr (i64 139742563165968 to ptr), ptr %18, align 8
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc nonnull ptr @julia__base_10956(i64 signext %\"base::Int64\", i64 signext %\"x::Int64\", i64 signext %\"pad::Int64\", i8 zeroext %\"neg::Bool\") unnamed_addr {\ntop:\n  %jlcallframe93 = alloca [2 x ptr], align 8\n  %\"base::Int64.fr\" = freeze i64 %\"base::Int64\"\n  %0 = icmp slt i64 %\"x::Int64\", 0\n  %1 = icmp sgt i64 %\"base::Int64.fr\", -1\n  %.not70 = and i1 %1, %0\n  br i1 %.not70, label %L149, label %L5\n\nL5:                                               ; preds = %top\n  %2 = call i64 @llvm.abs.i64(i64 %\"base::Int64.fr\", i1 false)\n  %3 = add i64 %2, -63\n  %narrow = icmp ult i64 %3, -61\n  br i1 %narrow, label %L146, label %L14\n\nL14:                                              ; preds = %L5\n  %4 = icmp ugt i64 %2, 36\n  %5 = select i1 %4, ptr inttoptr (i64 139742553460992 to ptr), ptr inttoptr (i64 139742553461312 to ptr)\n  %6 = call fastcc i64 @julia_ndigits0z_10961(i64 signext %\"x::Int64\", i64 signext %\"base::Int64.fr\")\n  %7 = call i64 @llvm.smax.i64(i64 %6, i64 %\"pad::Int64\")"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742555912208 to ptr), ptr %2 unordered, align 8, !tbaa !19, !alias.scope !17, !noalias !18
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "; Function Attrs: noinline noreturn\ndefine internal fastcc void @julia_invalid_wrap_err_10846(i64 signext %\"len::Int64\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(8) %\"dims::Tuple\", i64 signext %\"proddims::Int64\") unnamed_addr #15 {\ntop:\n  %\"new::Tuple.sroa.2.24.copyload\" = load i64, ptr %\"dims::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %0 = call ptr @gpu_gc_pool_alloc(i64 16)\n  store ptr null, ptr %0, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %1 = getelementptr inbounds i8, ptr %0, i64 8\n  store ptr null, ptr %1, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %2 = call ptr @gpu_gc" ⋯ 281 bytes ⋯ "  %4 = getelementptr inbounds i8, ptr %2, i64 16\n  store atomic ptr inttoptr (i64 139742555912160 to ptr), ptr %4 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %5 = getelementptr inbounds i8, ptr %2, i64 24\n  store i64 %\"new::Tuple.sroa.2.24.copyload\", ptr %5, align 8, !tbaa !21, !alias.scope !22, !noalias !23\n  %6 = getelementptr inbounds i8, ptr %2, i64 32\n  store atomic ptr inttoptr (i64 139742555912096 to ptr), ptr %6 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %7 = getelementptr inbounds i8, ptr %2, i64 40\n  store i64 %\"proddims::Int64\", ptr %7, align 8, !tbaa !21, !alias.scope !22, !noalias !23"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742555912160 to ptr), ptr %4 unordered, align 8, !tbaa !19, !alias.scope !17, !noalias !18
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "; Function Attrs: noinline noreturn\ndefine internal fastcc void @julia_invalid_wrap_err_10846(i64 signext %\"len::Int64\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(8) %\"dims::Tuple\", i64 signext %\"proddims::Int64\") unnamed_addr #15 {\ntop:\n  %\"new::Tuple.sroa.2.24.copyload\" = load i64, ptr %\"dims::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %0 = call ptr @gpu_gc_pool_alloc(i64 16)\n  store ptr null, ptr %0, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %1 = getelementptr inbounds i8, ptr %0, i64 8\n  store ptr null, ptr %1, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %2 = call ptr @gpu_gc" ⋯ 281 bytes ⋯ "  %4 = getelementptr inbounds i8, ptr %2, i64 16\n  store atomic ptr inttoptr (i64 139742555912160 to ptr), ptr %4 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %5 = getelementptr inbounds i8, ptr %2, i64 24\n  store i64 %\"new::Tuple.sroa.2.24.copyload\", ptr %5, align 8, !tbaa !21, !alias.scope !22, !noalias !23\n  %6 = getelementptr inbounds i8, ptr %2, i64 32\n  store atomic ptr inttoptr (i64 139742555912096 to ptr), ptr %6 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %7 = getelementptr inbounds i8, ptr %2, i64 40\n  store i64 %\"proddims::Int64\", ptr %7, align 8, !tbaa !21, !alias.scope !22, !noalias !23"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742555912096 to ptr), ptr %6 unordered, align 8, !tbaa !19, !alias.scope !17, !noalias !18
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "; Function Attrs: noinline noreturn\ndefine internal fastcc void @julia_invalid_wrap_err_10846(i64 signext %\"len::Int64\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(8) %\"dims::Tuple\", i64 signext %\"proddims::Int64\") unnamed_addr #15 {\ntop:\n  %\"new::Tuple.sroa.2.24.copyload\" = load i64, ptr %\"dims::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %0 = call ptr @gpu_gc_pool_alloc(i64 16)\n  store ptr null, ptr %0, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %1 = getelementptr inbounds i8, ptr %0, i64 8\n  store ptr null, ptr %1, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %2 = call ptr @gpu_gc" ⋯ 281 bytes ⋯ "  %4 = getelementptr inbounds i8, ptr %2, i64 16\n  store atomic ptr inttoptr (i64 139742555912160 to ptr), ptr %4 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %5 = getelementptr inbounds i8, ptr %2, i64 24\n  store i64 %\"new::Tuple.sroa.2.24.copyload\", ptr %5, align 8, !tbaa !21, !alias.scope !22, !noalias !23\n  %6 = getelementptr inbounds i8, ptr %2, i64 32\n  store atomic ptr inttoptr (i64 139742555912096 to ptr), ptr %6 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %7 = getelementptr inbounds i8, ptr %2, i64 40\n  store i64 %\"proddims::Int64\", ptr %7, align 8, !tbaa !21, !alias.scope !22, !noalias !23"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742555912064 to ptr), ptr %8 unordered, align 8, !tbaa !19, !alias.scope !17, !noalias !18
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "; Function Attrs: noinline noreturn\ndefine internal fastcc void @julia_invalid_wrap_err_10846(i64 signext %\"len::Int64\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(8) %\"dims::Tuple\", i64 signext %\"proddims::Int64\") unnamed_addr #15 {\ntop:\n  %\"new::Tuple.sroa.2.24.copyload\" = load i64, ptr %\"dims::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %0 = call ptr @gpu_gc_pool_alloc(i64 16)\n  store ptr null, ptr %0, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %1 = getelementptr inbounds i8, ptr %0, i64 8\n  store ptr null, ptr %1, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %2 = call ptr @gpu_gc" ⋯ 281 bytes ⋯ "  %4 = getelementptr inbounds i8, ptr %2, i64 16\n  store atomic ptr inttoptr (i64 139742555912160 to ptr), ptr %4 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %5 = getelementptr inbounds i8, ptr %2, i64 24\n  store i64 %\"new::Tuple.sroa.2.24.copyload\", ptr %5, align 8, !tbaa !21, !alias.scope !22, !noalias !23\n  %6 = getelementptr inbounds i8, ptr %2, i64 32\n  store atomic ptr inttoptr (i64 139742555912096 to ptr), ptr %6 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %7 = getelementptr inbounds i8, ptr %2, i64 40\n  store i64 %\"proddims::Int64\", ptr %7, align 8, !tbaa !21, !alias.scope !22, !noalias !23"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store atomic ptr inttoptr (i64 139742555911952 to ptr), ptr %10 unordered, align 8, !tbaa !19, !alias.scope !17, !noalias !18
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "; Function Attrs: noinline noreturn\ndefine internal fastcc void @julia_invalid_wrap_err_10846(i64 signext %\"len::Int64\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(8) %\"dims::Tuple\", i64 signext %\"proddims::Int64\") unnamed_addr #15 {\ntop:\n  %\"new::Tuple.sroa.2.24.copyload\" = load i64, ptr %\"dims::Tuple\", align 8, !tbaa !21, !alias.scope !47, !noalias !48\n  %0 = call ptr @gpu_gc_pool_alloc(i64 16)\n  store ptr null, ptr %0, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %1 = getelementptr inbounds i8, ptr %0, i64 8\n  store ptr null, ptr %1, align 8, !tbaa !28, !alias.scope !19, !noalias !20\n  %2 = call ptr @gpu_gc" ⋯ 281 bytes ⋯ "  %4 = getelementptr inbounds i8, ptr %2, i64 16\n  store atomic ptr inttoptr (i64 139742555912160 to ptr), ptr %4 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %5 = getelementptr inbounds i8, ptr %2, i64 24\n  store i64 %\"new::Tuple.sroa.2.24.copyload\", ptr %5, align 8, !tbaa !21, !alias.scope !22, !noalias !23\n  %6 = getelementptr inbounds i8, ptr %2, i64 32\n  store atomic ptr inttoptr (i64 139742555912096 to ptr), ptr %6 unordered, align 8, !tbaa !15, !alias.scope !19, !noalias !20\n  %7 = getelementptr inbounds i8, ptr %2, i64 40\n  store i64 %\"proddims::Int64\", ptr %7, align 8, !tbaa !21, !alias.scope !22, !noalias !23"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %memoryref_data = load ptr, ptr inttoptr (i64 139742553465664 to ptr), align 8, !tbaa !18, !alias.scope !21, !noalias !22
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc i64 @julia_ndigits0zpb_10964(i64 signext %\"x::Int64\", i64 signext %\"b::Int64\") unnamed_addr {\ntop:\n  %\"new::Tuple\" = alloca [1 x i64], align 8\n  %.not = icmp eq i64 %\"x::Int64\", 0\n  br i1 %.not, label %common.ret, label %L4\n\ncommon.ret:                                       ; preds = %pass16, %pass7, %pass, %L118, %L60, %L22, %L8, %top\n  %common.ret.op = phi i64 [ %4, %L8 ], [ %7, %L22 ], [ %15, %L60 ], [ %.zext, %pass ], [ 0, %top ], [ %spec.select, %pass7 ], [ %value_phi8.lcssa, %pass16 ], [ %value_phi18, %L118 ]\n  ret i64 %common.ret.op\n\nL4:                                               ; preds = %top\n  %0 = call i64 @llvm.abs.i64(i64 %\"x::Int64\", i1 false)\n  %1 = add i64 %\"b::Int64\", -2\n  %2 = call i64 @llvm.fshl.i64(i64 %1, i64 %1, i64 63)\n  switch i64 %2, label %L70 [\n    i64 0, label %L8\n    i64 3, label %pass\n    i64 7, label %L22\n    i64 4, label %L35\n  ]"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %memoryref_data658 = load ptr, ptr inttoptr (i64 139742506588560 to ptr), align 8, !tbaa !17, !alias.scope !20, !noalias !21
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc i64 @julia_writeshortest_11077(ptr noundef nonnull align 8 dereferenceable(24) %\"buf::Array\", i64 signext %\"pos::Int64\", double %\"x::Float64\", i8 zeroext %\"plus::Bool\", i8 zeroext %\"space::Bool\", i8 zeroext %\"hash::Bool\", i64 signext %\"precision::Int64\", i8 zeroext %\"expchar::UInt8\", i8 zeroext %\"padexp::Bool\", i8 zeroext %\"decchar::UInt8\", i8 zeroext %\"compact::Bool\") unnamed_addr {\ntop:\n  %\"new::Tuple63\" = alloca [1 x i64], align 8\n  %\"new::Tuple77\" = alloca [1 x i64], align 8\n  %\"new::Tuple91\" = alloca [1 x i64], align 8\n  %\"new::Tuple163\" = alloca [1 x i64], align 8\n  %\"new::Tuple177\" = alloca [1 x i64], align" ⋯ 49 bytes ⋯ "\n  %\"new::Tuple249\" = alloca [1 x i64], align 8\n  %\"new::Tuple263\" = alloca [1 x i64], align 8\n  %\"new::Tuple749\" = alloca [1 x i64], align 8\n  %\"new::Tuple763\" = alloca [1 x i64], align 8\n  %\"new::Tuple777\" = alloca [1 x i64], align 8\n  %0 = icmp slt i64 %\"pos::Int64\", 1\n  br i1 %0, label %L2439, label %L9\n\nL9:                                               ; preds = %top\n  %\"buf::Array.size_ptr\" = getelementptr inbounds i8, ptr %\"buf::Array\", i64 16\n  %\"buf::Array.size.0.copyload\" = load i64, ptr %\"buf::Array.size_ptr\", align 8, !tbaa !21, !alias.scope !61, !noalias !60\n  %.not1308 = icmp slt i64 %\"buf::Array.size.0.copyload\", %\"pos::Int64\""
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %memoryref_data599 = load ptr, ptr inttoptr (i64 139742506588560 to ptr), align 8, !tbaa !17, !alias.scope !20, !noalias !21
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc i64 @julia_writeshortest_11077(ptr noundef nonnull align 8 dereferenceable(24) %\"buf::Array\", i64 signext %\"pos::Int64\", double %\"x::Float64\", i8 zeroext %\"plus::Bool\", i8 zeroext %\"space::Bool\", i8 zeroext %\"hash::Bool\", i64 signext %\"precision::Int64\", i8 zeroext %\"expchar::UInt8\", i8 zeroext %\"padexp::Bool\", i8 zeroext %\"decchar::UInt8\", i8 zeroext %\"compact::Bool\") unnamed_addr {\ntop:\n  %\"new::Tuple63\" = alloca [1 x i64], align 8\n  %\"new::Tuple77\" = alloca [1 x i64], align 8\n  %\"new::Tuple91\" = alloca [1 x i64], align 8\n  %\"new::Tuple163\" = alloca [1 x i64], align 8\n  %\"new::Tuple177\" = alloca [1 x i64], align" ⋯ 49 bytes ⋯ "\n  %\"new::Tuple249\" = alloca [1 x i64], align 8\n  %\"new::Tuple263\" = alloca [1 x i64], align 8\n  %\"new::Tuple749\" = alloca [1 x i64], align 8\n  %\"new::Tuple763\" = alloca [1 x i64], align 8\n  %\"new::Tuple777\" = alloca [1 x i64], align 8\n  %0 = icmp slt i64 %\"pos::Int64\", 1\n  br i1 %0, label %L2439, label %L9\n\nL9:                                               ; preds = %top\n  %\"buf::Array.size_ptr\" = getelementptr inbounds i8, ptr %\"buf::Array\", i64 16\n  %\"buf::Array.size.0.copyload\" = load i64, ptr %\"buf::Array.size_ptr\", align 8, !tbaa !21, !alias.scope !61, !noalias !60\n  %.not1308 = icmp slt i64 %\"buf::Array.size.0.copyload\", %\"pos::Int64\""
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %memoryref_data = load ptr, ptr inttoptr (i64 139742506588560 to ptr), align 8, !tbaa !2, !alias.scope !7, !noalias !10
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc void @julia_append_c_digits_11095(i64 signext %\"olength::Int64\", i64 zeroext %\"digits::UInt64\", ptr noundef nonnull align 8 dereferenceable(24) %\"buf::Array\", i64 signext %\"pos::Int64\") unnamed_addr {\ntop:\n  %0 = icmp slt i64 %\"olength::Int64\", 2\n  br i1 %0, label %L73, label %L6.lr.ph\n\nL6.lr.ph:                                         ; preds = %top\n  %memoryref_data = load ptr, ptr inttoptr (i64 139742506588560 to ptr), align 8, !tbaa !56, !alias.scope !33, !noalias !34\n  %memoryref_data5 = load ptr, ptr %\"buf::Array\", align 8, !tbaa !56, !alias.scope !33, !noalias !34\n  %invariant.gep = getelementptr i8, ptr %memoryref_data5, i64 %\"pos::Int64\"\n  %invariant.gep50 = getelementptr i8, ptr %invariant.gep, i64 -3\n  %invariant.gep53 = getelementptr i8, ptr %invariant.gep, i64 -2\n  br label %L6\n\nL6:                                               ; preds = %L6, %L6.lr.ph\n  %value_phi148 = phi i64 [ %\"digits::UInt64\", %L6.lr.ph ], [ %1, %L6 ]\n  %value_phi47 = phi i64 [ %\"olength::Int64\", %L6.lr.ph ], [ %7, %L6 ]\n  %1 = udiv i64 %value_phi148, 100\n  %.neg = mul i64 %1, 9223372036854775708\n  %2 = add i64 %.neg, %value_phi148\n  %memoryref_byteoffset = shl i64 %2, 1"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %memoryref_data = load ptr, ptr inttoptr (i64 139742506588560 to ptr), align 8, !tbaa !2, !alias.scope !7, !noalias !10
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc void @julia_append_c_digits_10979(i64 signext %\"olength::Int64\", i64 zeroext %\"digits::UInt64\", ptr noundef nonnull align 8 dereferenceable(16) %\"buf::GenericMemory\", i64 signext %\"pos::Int64\") unnamed_addr {\ntop:\n  %0 = icmp slt i64 %\"olength::Int64\", 2\n  br i1 %0, label %L47, label %L6.lr.ph\n\nL6.lr.ph:                                         ; preds = %top\n  %memoryref_data = load ptr, ptr inttoptr (i64 139742506588560 to ptr), align 8, !tbaa !56, !alias.scope !33, !noalias !34\n  %memory_data_ptr = getelementptr inbounds { i64, ptr }, ptr %\"buf::GenericMemory\", i64 0, i32 1\n  %memoryref_data5 = load ptr, ptr %memory_data_ptr, align 8, !tbaa !30, !alias.scope !33, !noalias !34, !nonnull !37\n  %invariant.gep = getelementptr i8, ptr %memoryref_data5, i64 %\"pos::Int64\"\n  %invariant.gep37 = getelementptr i8, ptr %invariant.gep, i64 -3\n  %invariant.gep40 = getelementptr i8, ptr %invariant.gep, i64 -2\n  br label %L6\n\nL6:                                               ; preds = %L6, %L6.lr.ph\n  %value_phi135 = phi i64 [ %\"digits::UInt64\", %L6.lr.ph ], [ %1, %L6 ]\n  %value_phi34 = phi i64 [ %\"olength::Int64\", %L6.lr.ph ], [ %7, %L6 ]\n  %1 = udiv i64 %value_phi135, 100\n  %.neg = mul i64 %1, 9223372036854775708\n  %2 = add i64 %.neg, %value_phi135"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store ptr inttoptr (i64 139742562958576 to ptr), ptr %8, align 8
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc nonnull ptr @julia__base_10929(i64 signext %\"base::Int64\", i64 zeroext %\"x::UInt64\", i64 signext %\"pad::Int64\", i8 zeroext %\"neg::Bool\") unnamed_addr {\nL6:\n  %jlcallframe95 = alloca [2 x ptr], align 8\n  %0 = call i64 @llvm.abs.i64(i64 %\"base::Int64\", i1 false)\n  %1 = add i64 %0, -63\n  %narrow = icmp ult i64 %1, -61\n  br i1 %narrow, label %L173, label %L15\n\nL15:                                              ; preds = %L6\n  %2 = icmp ugt i64 %0, 36\n  %3 = select i1 %2, ptr inttoptr (i64 139742553460992 to ptr), ptr inttoptr (i64 139742553461312 to ptr)\n  %4 = icmp sgt i64 %\"base::Int64\", -2\n  br i1 %4, label %L26, label %L24\n\nL24:                                              ; preds = %L15\n  %5 = call fastcc i64 @julia_ndigits0znb_10954(i64 zeroext %\"x::UInt64\", i64 signext %\"base::Int64\")\n  br label %L33\n\nL26:                                              ; preds = %L15\n  %6 = icmp slt i64 %\"base::Int64\", 2"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store ptr inttoptr (i64 139742563165904 to ptr), ptr %19, align 8
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc nonnull ptr @julia__base_10929(i64 signext %\"base::Int64\", i64 zeroext %\"x::UInt64\", i64 signext %\"pad::Int64\", i8 zeroext %\"neg::Bool\") unnamed_addr {\nL6:\n  %jlcallframe95 = alloca [2 x ptr], align 8\n  %0 = call i64 @llvm.abs.i64(i64 %\"base::Int64\", i1 false)\n  %1 = add i64 %0, -63\n  %narrow = icmp ult i64 %1, -61\n  br i1 %narrow, label %L173, label %L15\n\nL15:                                              ; preds = %L6\n  %2 = icmp ugt i64 %0, 36\n  %3 = select i1 %2, ptr inttoptr (i64 139742553460992 to ptr), ptr inttoptr (i64 139742553461312 to ptr)\n  %4 = icmp sgt i64 %\"base::Int64\", -2\n  br i1 %4, label %L26, label %L24\n\nL24:                                              ; preds = %L15\n  %5 = call fastcc i64 @julia_ndigits0znb_10954(i64 zeroext %\"x::UInt64\", i64 signext %\"base::Int64\")\n  br label %L33\n\nL26:                                              ; preds = %L15\n  %6 = icmp slt i64 %\"base::Int64\", 2"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = store ptr inttoptr (i64 139742599072640 to ptr), ptr %2, align 8
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc void @julia_println_10792(ptr noundef nonnull %\"x::String\") unnamed_addr {\ntop:\n  %jlcallframe1 = alloca [3 x ptr], align 8\n  %0 = getelementptr inbounds ptr, ptr inttoptr (i64 139742501125776 to ptr), i64 1\n  %stdout.checked = load atomic ptr, ptr %0 unordered, align 8, !tbaa !69, !alias.scope !19, !noalias !20\n  %.not = icmp eq ptr %stdout.checked, null\n  br i1 %.not, label %err, label %ok\n\nerr:                                              ; preds = %top\n  call void @ijl_undefined_var_error(ptr inttoptr (i64 139742392433584 to ptr), ptr inttoptr (i64 139742551218272 to ptr))\n  unreachable\n\nok:                                               ; preds = %top\n  store ptr %stdout.checked, ptr %jlcallframe1, align 8\n  %1 = getelementptr inbounds ptr, ptr %jlcallframe1, i64 1\n  store ptr %\"x::String\", ptr %1, align 8\n  %2 = getelementptr inbounds ptr, ptr %jlcallframe1, i64 2\n  store ptr inttoptr (i64 139742599072640 to ptr), ptr %2, align 8\n  %3 = call nonnull ptr @ijl_apply_generic(ptr inttoptr (i64 139742484208784 to ptr), ptr nonnull %jlcallframe1, i32 3)\n  ret void"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %.tag = load atomic volatile i64, ptr inttoptr (i64 -8 to ptr) unordered, align 8, !tbaa !25, !range !27
+│   name = Symbol("")
+│   file = Symbol("")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc void @julia_print_10910(ptr nocapture noundef nonnull readonly align 8 dereferenceable(16) %\"io::IOContext\", ptr noundef nonnull %\"xs[1]::String\", i64 signext %\"xs[2]::Int64\", ptr noundef nonnull %\"xs[3]::String\") unnamed_addr {\ntop:\n  %gcframe = call ptr @julia.new_gc_frame(i32 5)\n  %.roots.xs18.sroa.0 = call ptr @julia.get_gc_frame_slot(ptr nonnull %gcframe, i32 1)\n  %.roots.xs18.sroa.4 = call ptr @julia.get_gc_frame_slot(ptr nonnull %gcframe, i32 0)\n  %xs.sroa.0 = alloca i64, align 8\n  %xs.sroa.1 = alloca i64, align 8\n  %xs.sroa.3 = alloca i64, align 8\n  %\"new::Tuple.sroa.0\" = alloca i64, align 8\n  %\"new::Tuple.s" ⋯ 764 bytes ⋯ "atile i64, ptr %\"new::Tuple.sroa.1\", align 8, !tbaa !40, !alias.scope !42, !noalias !43\n  store volatile i64 %\"new::Tuple.sroa.1.0.new::Tuple.sroa.1.0.new::Tuple.sroa.1.0.new::Tuple.sroa.1.0.copyload\", ptr %xs.sroa.1, align 8, !tbaa !40, !alias.scope !42, !noalias !43\n  %\"new::Tuple.sroa.2.0.new::Tuple.sroa.2.0.new::Tuple.sroa.2.0.new::Tuple.sroa.2.0.copyload\" = load volatile i64, ptr %\"new::Tuple.sroa.2\", align 8, !tbaa !40, !alias.scope !42, !noalias !43\n  store volatile i64 %\"new::Tuple.sroa.2.0.new::Tuple.sroa.2.0.new::Tuple.sroa.2.0.new::Tuple.sroa.2.0.copyload\", ptr %xs.sroa.3, align 8, !tbaa !40, !alias.scope !42, !noalias !43"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %.unbox37.pre = load i64, ptr inttoptr (i64 139742497580304 to ptr), align 8, !tbaa !29, !alias.scope !27, !noalias !28
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc nonnull ptr @julia_print_to_string_11008(ptr noundef nonnull %\"xs[1]::String\", i64 signext %\"xs[2]::Int64\", ptr noundef nonnull %\"xs[3]::String\", ptr nocapture noundef nonnull readonly align 8 dereferenceable(16) %\"xs[4]::Tuple\") unnamed_addr {\ntop:\n  %xs.sroa.4 = alloca [3 x i64], align 8\n  %\"new::Tuple.sroa.2\" = alloca [3 x i64], align 8\n  %\"new::Tuple36\" = alloca [1 x i64], align 8\n  %\"new::Tuple.sroa.2.24.sroa_idx\" = getelementptr inbounds i8, ptr %\"new::Tuple.sroa.2\", i64 8\n  call void @llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8 dereferenceable(16) %\"new::Tuple.sroa.2.24.sroa_idx\", ptr noundef nonnull " ⋯ 242 bytes ⋯ "le(24) %\"new::Tuple.sroa.2\", i64 24, i1 false), !tbaa !40, !alias.scope !42, !noalias !43\n  %xs.sroa.4.24.sroa_idx = getelementptr inbounds i8, ptr %xs.sroa.4, i64 8\n  br label %L10\n\nL10:                                              ; preds = %post_union_move, %top\n  %tindex_phi = phi i8 [ -128, %top ], [ %35, %post_union_move ]\n  %ptr_phi = phi ptr [ %\"xs[1]::String\", %top ], [ %getfield, %post_union_move ]\n  %value_phi = phi i64 [ 2, %top ], [ %28, %post_union_move ]\n  %value_phi1 = phi i64 [ 0, %top ], [ %4, %post_union_move ]\n  %0 = and i8 %tindex_phi, 127\n  switch i8 %0, label %post_isa61 [\n    i8 1, label %L15.cont\n    i8 2, label %L31"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+┌ Warning: Found pointer references to julia data
+│   llvm instruction = %memoryref_data = load ptr, ptr inttoptr (i64 139742553465664 to ptr), align 8, !tbaa !18, !alias.scope !21, !noalias !22
+│   name = :jl_system_image_data
+│   file = Symbol("/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/lib/julia/sys.so")
+│   line = -1
+│   fromC = true
+│   inlined = false
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:60
+┌ Warning: LLVM function generated warnings due to raw pointers embedded in the code. This will likely cause errors or undefined behaviour.
+│   func = "define internal fastcc i64 @julia_ndigits0zpb_10946(i64 zeroext %\"x::UInt64\", i64 signext %\"b::Int64\") unnamed_addr {\ntop:\n  %\"new::Tuple\" = alloca [1 x i64], align 8\n  %.not = icmp eq i64 %\"x::UInt64\", 0\n  br i1 %.not, label %common.ret, label %L5\n\ncommon.ret:                                       ; preds = %pass16, %pass7, %pass, %L118, %L60, %L22, %L8, %top\n  %common.ret.op = phi i64 [ %3, %L8 ], [ %6, %L22 ], [ %14, %L60 ], [ %.zext, %pass ], [ 0, %top ], [ %spec.select, %pass7 ], [ %value_phi8.lcssa, %pass16 ], [ %value_phi18, %L118 ]\n  ret i64 %common.ret.op\n\nL5:                                               ; preds = %top\n  %0 = add i64 %\"b::Int64\", -2\n  %1 = call i64 @llvm.fshl.i64(i64 %0, i64 %0, i64 63)\n  switch i64 %1, label %L70 [\n    i64 0, label %L8\n    i64 3, label %pass\n    i64 7, label %L22\n    i64 4, label %L35\n  ]\n"
+└ @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/pointer_warning.jl:34
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `main':
+start:(.text+0x14e0): multiple definition of `main'; /tmp/wrapper-547199.o:wrapper.c:(.text+0x0): first defined here
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `print_to_string_11040':
+start:(.text+0x2c): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4f): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x7e): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xa1): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xdd): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xe7): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x10d): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x195): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1b6): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x299): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2ab): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_print_10888':
+start:(.text+0x2cf): undefined reference to `julia.get_pgcstack'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2e1): undefined reference to `ijl_excstack_state'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2e9): undefined reference to `julia.except_enter'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x331): undefined reference to `ijl_pop_handler_noexcept'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x34a): undefined reference to `ijl_pop_handler'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_ndigits0z_10961':
+start:(.text+0x447): undefined reference to `ijl_box_int64'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x478): undefined reference to `ijl_invoke'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x480): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_print_to_string_10827':
+start:(.text+0x643): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x672): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x6b1): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x6bb): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x6e1): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x772): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x7a1): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x889): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x89b): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia__resize__10879':
+start:(.text+0x9df): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x9e9): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xafb): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xb0f): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xb19): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xb30): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xb40): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xb52): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xb5f): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xb76): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_show_delim_array_10896':
+start:(.text+0xbcf): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xc03): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xcdd): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_ndigits0znb_10954':
+start:(.text+0xe63): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xe6b): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xe77): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0xe7f): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia__base_10956':
+start:(.text+0x1045): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x104f): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x11c5): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x11cd): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x11d5): undefined reference to `ijl_box_int64'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1203): undefined reference to `ijl_invoke'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x120b): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1213): undefined reference to `ijl_box_int64'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1241): undefined reference to `ijl_invoke'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1249): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1250): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1258): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_hex_10967':
+start:(.text+0x12dc): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x12e6): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_show_11051':
+start:(.text+0x141f): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1429): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1458): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `main':
+start:(.text+0x14fe): undefined reference to `julia.new_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1506): undefined reference to `julia.get_pgcstack'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1517): undefined reference to `julia.push_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1547): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x155c): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1579): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1595): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x15a2): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x15c3): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x15d7): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1653): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1667): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1688): undefined reference to `jl_alloc_genericmemory_unchecked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x16b9): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x16c6): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x16d3): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x170b): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x171c): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x175c): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x176d): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x177e): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x17bc): undefined reference to `ijl_invoke'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x17c4): undefined reference to `julia.pop_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x17df): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1809): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1816): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1826): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1835): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x183f): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1852): undefined reference to `jl_argument_error'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_invalid_wrap_err_10846':
+start:(.text+0x1877): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x188c): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x18dc): undefined reference to `jl_nothing'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x18ed): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x18f8): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_print_10916':
+start:(.text+0x1917): undefined reference to `julia.new_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x191f): undefined reference to `julia.get_pgcstack'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x192f): undefined reference to `julia.push_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x193e): undefined reference to `ijl_excstack_state'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1946): undefined reference to `julia.except_enter'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1977): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1995): undefined reference to `ijl_pop_handler_noexcept'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x199d): undefined reference to `julia.pop_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x19b9): undefined reference to `ijl_pop_handler'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_ndigits0zpb_10964':
+start:(.text+0x1bb3): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1bbb): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1bc2): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1bca): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1bd1): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1bd9): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_resize__11058':
+start:(.text+0x1f7e): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1f89): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1fc2): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x1fcd): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia___growend___0_11067':
+start:(.text+0x2004): undefined reference to `julia.new_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x200c): undefined reference to `julia.get_pgcstack'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2023): undefined reference to `julia.push_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2121): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x212b): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2151): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x21ad): undefined reference to `jl_alloc_genericmemory_unchecked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2249): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2256): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x22c1): undefined reference to `julia.pop_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x22fb): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2308): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2318): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2327): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x234a): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2357): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2367): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2376): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2385): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2392): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x23a6): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x23b8): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x23c5): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x23d7): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x23e3): undefined reference to `jl_argument_error'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_ensureroom_reallocate_10864':
+start:(.text+0x2433): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x243d): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x2499): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x24a4): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia__throw_argerror_10807':
+start:(.text+0x24ca): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x24d5): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_writeshortest_11077':
+start:(.text+0x3ddd): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3de8): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f34): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f3c): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f43): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f4b): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f52): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f5a): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f61): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f69): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f70): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f78): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f7f): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x3f87): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_hvcat_fill__10996':
+start:(.text+0x417c): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x41b4): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x423a): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4245): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_write_10906':
+start:(.text+0x4397): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x43a9): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_bin_10993':
+start:(.text+0x44b9): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x44c3): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia__base_10929':
+start:(.text+0x48a3): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x48ad): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x49c3): undefined reference to `ijl_box_int64'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x49f1): undefined reference to `ijl_invoke'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x49f9): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4a01): undefined reference to `ijl_box_int64'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4a2f): undefined reference to `ijl_invoke'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4a37): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4a3e): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4a46): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_println_10792':
+start:(.text+0x4be2): undefined reference to `ijl_apply_generic'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4bf3): undefined reference to `ijl_undefined_var_error'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_print_10910':
+start:(.text+0x4c24): undefined reference to `julia.new_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4c34): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4c41): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4c49): undefined reference to `julia.get_pgcstack'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4c59): undefined reference to `julia.push_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4c9c): undefined reference to `ijl_excstack_state'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4ca9): undefined reference to `julia.except_enter'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4d06): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4d51): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4d61): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4da3): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4dbc): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4dc9): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4de9): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4dfb): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4e0d): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4e1d): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4e50): undefined reference to `ijl_pop_handler_noexcept'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4e58): undefined reference to `julia.pop_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4e76): undefined reference to `ijl_pop_handler'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_print_11047':
+start:(.text+0x4e93): undefined reference to `julia.get_pgcstack'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4ea5): undefined reference to `ijl_excstack_state'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4ead): undefined reference to `julia.except_enter'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4ed2): undefined reference to `ijl_pop_handler_noexcept'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4ee9): undefined reference to `ijl_pop_handler'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia__checkaxs_10822':
+start:(.text+0x4f39): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x4f44): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_ensureroom_slowpath_10871':
+start:(.text+0x538d): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x53a1): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x53ae): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x53c0): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x53d0): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x53e2): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x53f2): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5404): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5411): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5425): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5432): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5444): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5454): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5466): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5476): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5488): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_print_to_string_11008':
+start:(.text+0x5556): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5584): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x55d8): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x55e2): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5608): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x56c5): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x56f3): undefined reference to `ijl_get_nth_field_checked'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x57e9): undefined reference to `gpu_gc_pool_alloc'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x57fb): undefined reference to `ijl_bounds_error_int'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_oct_10990':
+start:(.text+0x5853): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x585d): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_ndigits0zpb_10946':
+start:(.text+0x5a83): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5a8b): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5a92): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5a9a): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5aa1): undefined reference to `jl_diverror_exception'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5aa9): undefined reference to `ijl_throw'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_dec_10970':
+start:(.text+0x5aff): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5b09): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_print_11018':
+start:(.text+0x5b8f): undefined reference to `julia.get_pgcstack'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5ba1): undefined reference to `ijl_excstack_state'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5ba9): undefined reference to `julia.except_enter'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5bf1): undefined reference to `ijl_pop_handler_noexcept'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5c0a): undefined reference to `ijl_pop_handler'
+/usr/bin/x86_64-linux-gnu-ld: jacobi/main.o: in function `julia_print_11027':
+start:(.text+0x5c77): undefined reference to `julia.new_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5c7f): undefined reference to `julia.get_pgcstack'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5c8f): undefined reference to `julia.push_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5c9e): undefined reference to `ijl_excstack_state'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5ca6): undefined reference to `julia.except_enter'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5cd4): undefined reference to `julia.get_gc_frame_slot'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5cf2): undefined reference to `ijl_pop_handler_noexcept'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5cfa): undefined reference to `julia.pop_gc_frame'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5d16): undefined reference to `ijl_pop_handler'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5d3d): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5d4a): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5d8e): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5da1): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5dde): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5df1): undefined reference to `ijl_load_and_lookup'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5e2a): undefined reference to `jl_libjulia_internal_handle'
+/usr/bin/x86_64-linux-gnu-ld: start:(.text+0x5e34): undefined reference to `ijl_load_and_lookup'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+ERROR: LoadError: failed process: Process(setenv(`/home/aprihodko/.julia/artifacts/207eb5b8330e24674fe59b50d72f4b3d946219c8/tools/clang jacobi/wrapper.c jacobi/main.o -o jacobi/main`,["PATH=/home/aprihodko/.julia/artifacts/207eb5b8330e24674fe59b50d72f4b3d946219c8/tools:/home/aprihodko/.local/bin:/home/aprihodko/bin:/home/aprihodko/.juliaup/bin:/home/aprihodko/bin:/home/aprihodko/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games", "QT_ACCESSIBILITY=1", "LD_LIBRARY_PATH=/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/bin/../lib/julia:/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/bin/../lib/julia:/home/aprihodko/.julia/juliaup/julia-1.12.1+0.x64.linux.gnu/bin/../lib", "TMUX=/tmp/tmux-1000/default,2030,0", "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus", "XDG_CURRENT_DESKTOP=XFCE", "XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0", "LANG=en_US.UTF-8", "LOGNAME=aprihodko", "XDG_SESSION_DESKTOP=lightdm-xsession"  …  "XDG_SESSION_ID=1", "LC_IDENTIFICATION=ru_RU.UTF-8", "SESSION_MANAGER=local/aprihodko-81d6:@/tmp/.ICE-unix/833,unix/aprihodko-81d6:/tmp/.ICE-unix/833", "TMUX_PANE=%0", "HOME=/home/aprihodko", "TERM=tmux-256color", "LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.swp=00;90:*.tmp=00;90:*.dpkg-dist=00;90:*.dpkg-old=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:", "COLORTERM=truecolor", "OPENBLAS_MAIN_FREE=1", "VTE_VERSION=7006"]), ProcessExited(1)) [1]
+
+Stacktrace:
+  [1] pipeline_error
+    @ ./process.jl:598 [inlined]
+  [2] run(::Cmd; wait::Bool)
+    @ Base ./process.jl:513
+  [3] run
+    @ ./process.jl:510 [inlined]
+  [4] generate_executable(funcs::Vector{Tuple{Function, Tuple{Vararg{DataType}}}}, path::String, name::String, filename::String; demangle::Bool, cflags::Cmd, target::StaticTarget, llvm_to_clang::Bool, kwargs::@Kwargs{})
+    @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/StaticCompiler.jl:340
+  [5] generate_executable
+    @ ~/.julia/packages/StaticCompiler/eSLug/src/StaticCompiler.jl:293 [inlined]
+  [6] compile_executable(funcs::Vector{Tuple{Function, Tuple{Vararg{DataType}}}}, path::String, name::String; filename::String, demangle::Bool, cflags::Cmd, target::StaticTarget, llvm_to_clang::Bool, kwargs::@Kwargs{})
+    @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/StaticCompiler.jl:128
+  [7] compile_executable(f::Function, types::Tuple{}, path::String, name::String; also_expose::Vector{Tuple{Function, Tuple{DataType}}}, target::StaticTarget, kwargs::@Kwargs{})
+    @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/StaticCompiler.jl:106
+  [8] compile_executable(f::Function, types::Tuple{}, path::String, name::String)
+    @ StaticCompiler ~/.julia/packages/StaticCompiler/eSLug/src/StaticCompiler.jl:103
+  [9] top-level scope
+    @ ~/t/GitHub/bmstu/bmstu/числ/файлы/hw1/lab4/second.jl:24
+ [10] include(mod::Module, _path::String)
+    @ Base ./Base.jl:306
+ [11] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:317
+ [12] _start()
+    @ Base ./client.jl:550
+in expression starting at /home/aprihodko/t/GitHub/bmstu/bmstu/числ/файлы/hw1/lab4/second.jl:24
