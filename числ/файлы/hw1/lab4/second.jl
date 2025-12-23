@@ -1,5 +1,7 @@
 using StaticCompiler
 using LinearAlgebra
+using Pkg
+Pkg.add("SymmetricMatrices")
 
 function find_max_nondiagonal(A::Symmetric{Float64, Matrix{Float64}})
     n::Int = size(A, 1)
