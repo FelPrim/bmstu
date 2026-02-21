@@ -1,8 +1,8 @@
-lab1: wip.c
+lab2: wip.c
 	gcc -std=c23 \
 	-Wall -Wextra -Wpedantic \
 	-Wconversion -Wshadow -Wstrict-prototypes -Wfloat-equal -fno-common \
 	-g3 -Og \
 	-fsanitize=address,undefined -fsanitize-address-use-after-scope -fno-omit-frame-pointer -fstack-protector-all \
-	wip.c -o lab1 -lm -llapacke -lopenblas
-	./lab1
+	wip.c -o lab2 -lm #-llapacke -lopenblas
+	./lab2
